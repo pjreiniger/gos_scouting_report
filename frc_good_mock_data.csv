@@ -1,0 +1,217 @@
+Scouter Initials,Match Number,Robot,Team Number,Starting Position,No Show,Moved?,Timer,Offense Skill,Defense Skill,Died/Tipped Over,Yellow/Red Card,End Position,Comments,Coral L1 Auto,Coral L1 Teleop,Coral L2 Auto,Coral L2 Teleop,Coral L3 Auto,Coral L3 Teleop,Coral L4 Auto,Coral L4 Teleop,Algae in Net Auto,Algae in Net Teleop,Algae in Processor Auto,Algae in Processor Teleop
+AB,1,Red 1,5743,Deep,TRUE,FALSE,142.36,5,Poor,TRUE,No Card,Park,,3,3,3,3,1,1,2,2,2,2,10,10
+AB,1,Red 2,5750,Deep,FALSE,TRUE,27.19,4,Average,TRUE,Yellow Card,Park,Good match,1,1,0,0,3,3,1,1,6,6,8,8
+IJ,1,Red 3,1783,Park,FALSE,TRUE,40.72,4,Average,FALSE,No Card,Shallow,Robot stalled,4,4,2,2,1,1,5,5,9,9,5,5
+CD,1,Blue 1,2955,Shallow,TRUE,TRUE,46.72,4,Poor,FALSE,Yellow Card,Shallow,Good match,4,4,4,4,2,2,3,3,3,3,1,1
+CD,1,Blue 2,9895,Deep,TRUE,TRUE,59.86,3,Average,TRUE,No Card,Shallow,Issues with scoring,2,2,1,1,1,1,1,1,2,2,9,9
+IJ,1,Blue 3,5435,Park,TRUE,TRUE,113.31,1,Excellent,TRUE,No Card,Shallow,,2,2,5,5,5,5,4,4,2,2,3,3
+IJ,2,Red 1,8708,Shallow,FALSE,TRUE,9.86,1,Good,TRUE,No Card,Deep,Robot stalled,5,5,1,1,0,0,5,5,10,10,6,6
+IJ,2,Red 2,5743,Shallow,TRUE,FALSE,18.69,5,Good,FALSE,Yellow Card,Deep,Robot stalled,3,3,4,4,3,3,0,0,6,6,5,5
+GH,2,Red 3,1015,Shallow,TRUE,TRUE,55.36,3,Good,FALSE,No Card,Park,,5,5,1,1,5,5,4,4,0,0,5,5
+GH,2,Blue 1,2955,Deep,FALSE,FALSE,22.45,3,Poor,FALSE,Yellow Card,Deep,Issues with scoring,3,3,5,5,2,2,4,4,9,9,4,4
+EF,2,Blue 2,9895,Shallow,FALSE,FALSE,87.61,2,Not Observed,FALSE,Red Card,Park,,1,1,2,2,5,5,5,5,9,9,6,6
+IJ,2,Blue 3,5750,Park,TRUE,FALSE,59.51,5,Poor,TRUE,Yellow Card,Park,,2,2,0,0,2,2,2,2,8,8,10,10
+EF,3,Red 1,1783,Shallow,FALSE,FALSE,89.62,3,Good,FALSE,Yellow Card,Park,Robot stalled,1,1,3,3,4,4,1,1,4,4,6,6
+IJ,3,Red 2,2955,Shallow,TRUE,TRUE,96,1,Excellent,FALSE,Red Card,Park,Issues with scoring,4,4,3,3,1,1,2,2,0,0,8,8
+GH,3,Red 3,7283,Park,FALSE,FALSE,128.18,1,Not Observed,FALSE,No Card,None,Good match,0,0,5,5,0,0,0,0,5,5,6,6
+EF,3,Blue 1,6354,Shallow,TRUE,TRUE,40.08,3,Excellent,TRUE,No Card,None,,0,0,1,1,5,5,1,1,8,8,9,9
+GH,3,Blue 2,1670,Shallow,TRUE,TRUE,87.07,1,Good,TRUE,Red Card,None,Robot stalled,0,0,2,2,0,0,0,0,10,10,9,9
+CD,3,Blue 3,9895,Park,FALSE,TRUE,86.32,3,Not Observed,FALSE,No Card,Deep,Robot stalled,0,0,3,3,0,0,2,2,3,3,1,1
+EF,4,Red 1,9895,Shallow,FALSE,FALSE,48.2,2,Excellent,TRUE,Red Card,None,Robot stalled,2,2,3,3,5,5,4,4,5,5,6,6
+GH,4,Red 2,5435,Shallow,FALSE,FALSE,134.1,2,Average,FALSE,Yellow Card,Deep,Robot stalled,4,4,0,0,5,5,5,5,4,4,2,2
+AB,4,Red 3,1015,Deep,FALSE,FALSE,25.97,2,Poor,TRUE,Yellow Card,None,Robot stalled,4,4,0,0,0,0,0,0,9,9,1,1
+IJ,4,Blue 1,8219,Deep,TRUE,FALSE,70.06,5,Excellent,TRUE,Yellow Card,Shallow,,4,4,3,3,5,5,0,0,6,6,8,8
+AB,4,Blue 2,5750,Shallow,FALSE,TRUE,93.05,1,Poor,TRUE,Yellow Card,Shallow,Issues with scoring,4,4,3,3,3,3,2,2,5,5,6,6
+IJ,4,Blue 3,1783,Shallow,FALSE,FALSE,125.65,4,Excellent,TRUE,Yellow Card,Park,Good match,4,4,3,3,0,0,5,5,6,6,3,3
+EF,5,Red 1,7283,Shallow,FALSE,FALSE,92.22,5,Not Observed,TRUE,Red Card,Park,Robot stalled,3,3,0,0,3,3,2,2,2,2,7,7
+GH,5,Red 2,5435,Shallow,FALSE,FALSE,111.28,5,Excellent,FALSE,Yellow Card,Park,Issues with scoring,0,0,0,0,3,3,3,3,9,9,5,5
+GH,5,Red 3,6354,Deep,TRUE,TRUE,89.99,5,Average,FALSE,Yellow Card,None,Robot stalled,5,5,5,5,0,0,2,2,4,4,6,6
+GH,5,Blue 1,5743,Deep,FALSE,TRUE,132.87,5,Poor,TRUE,Red Card,Park,Issues with scoring,0,0,1,1,0,0,4,4,0,0,6,6
+EF,5,Blue 2,8708,Deep,TRUE,FALSE,60.37,3,Poor,TRUE,No Card,Shallow,Good match,0,0,3,3,0,0,4,4,6,6,3,3
+GH,5,Blue 3,2955,Shallow,TRUE,FALSE,100.65,2,Good,TRUE,No Card,Deep,Robot stalled,3,3,2,2,3,3,5,5,10,10,8,8
+IJ,6,Red 1,9895,Park,FALSE,FALSE,11.83,1,Excellent,FALSE,No Card,Park,,5,5,2,2,0,0,1,1,6,6,8,8
+CD,6,Red 2,1015,Shallow,FALSE,FALSE,76,4,Average,TRUE,Yellow Card,Deep,,1,1,4,4,5,5,3,3,6,6,1,1
+GH,6,Red 3,1670,Deep,FALSE,TRUE,9.14,2,Poor,FALSE,No Card,None,Robot stalled,5,5,4,4,5,5,3,3,5,5,5,5
+CD,6,Blue 1,5743,Deep,TRUE,FALSE,73.89,5,Excellent,TRUE,Red Card,Park,Robot stalled,2,2,0,0,1,1,4,4,3,3,5,5
+GH,6,Blue 2,8219,Shallow,FALSE,TRUE,26.65,2,Poor,TRUE,Red Card,Deep,Good match,5,5,2,2,4,4,4,4,2,2,10,10
+GH,6,Blue 3,5750,Park,FALSE,TRUE,76.01,4,Excellent,TRUE,No Card,Shallow,Robot stalled,2,2,2,2,1,1,2,2,3,3,5,5
+CD,7,Red 1,5750,Shallow,TRUE,TRUE,142.55,3,Average,TRUE,Yellow Card,Park,,3,3,4,4,3,3,5,5,6,6,8,8
+EF,7,Red 2,1783,Park,FALSE,TRUE,78.07,5,Poor,FALSE,Yellow Card,None,Issues with scoring,4,4,5,5,4,4,0,0,5,5,6,6
+EF,7,Red 3,5435,Park,FALSE,TRUE,54.07,4,Excellent,TRUE,Red Card,None,Robot stalled,3,3,2,2,1,1,1,1,9,9,10,10
+CD,7,Blue 1,2955,Shallow,FALSE,TRUE,58.58,1,Good,TRUE,No Card,Deep,Robot stalled,5,5,5,5,3,3,2,2,1,1,10,10
+AB,7,Blue 2,9895,Deep,TRUE,FALSE,112.61,4,Average,FALSE,Red Card,Park,,0,0,2,2,4,4,4,4,5,5,9,9
+CD,7,Blue 3,1015,Park,FALSE,FALSE,69.99,4,Poor,TRUE,Yellow Card,Park,Good match,2,2,2,2,5,5,2,2,7,7,2,2
+AB,8,Red 1,8708,Shallow,TRUE,TRUE,84.57,1,Good,FALSE,Yellow Card,Deep,,1,1,5,5,0,0,1,1,3,3,10,10
+IJ,8,Red 2,1783,Shallow,FALSE,TRUE,55.76,5,Not Observed,FALSE,No Card,None,Issues with scoring,0,0,4,4,3,3,0,0,9,9,10,10
+AB,8,Red 3,6354,Park,TRUE,FALSE,107.09,1,Not Observed,FALSE,Red Card,Deep,Good match,1,1,5,5,4,4,3,3,9,9,1,1
+CD,8,Blue 1,5743,Park,TRUE,TRUE,86.43,5,Not Observed,TRUE,Red Card,Deep,Good match,1,1,3,3,5,5,0,0,3,3,9,9
+CD,8,Blue 2,2955,Shallow,TRUE,TRUE,134.11,3,Excellent,TRUE,Red Card,None,Issues with scoring,1,1,2,2,0,0,4,4,10,10,2,2
+CD,8,Blue 3,1670,Park,TRUE,FALSE,57.19,1,Excellent,FALSE,Red Card,Deep,Good match,4,4,3,3,5,5,2,2,10,10,1,1
+IJ,9,Red 1,2955,Deep,TRUE,FALSE,59.95,4,Average,TRUE,No Card,Shallow,Issues with scoring,2,2,5,5,0,0,5,5,0,0,1,1
+CD,9,Red 2,5750,Park,TRUE,FALSE,84.92,2,Excellent,TRUE,Yellow Card,Park,,0,0,0,0,1,1,2,2,3,3,3,3
+IJ,9,Red 3,7283,Park,TRUE,FALSE,1.39,2,Poor,FALSE,Yellow Card,None,Good match,2,2,1,1,4,4,4,4,3,3,1,1
+EF,9,Blue 1,8219,Shallow,FALSE,TRUE,103.8,4,Poor,FALSE,No Card,Park,Good match,2,2,3,3,1,1,1,1,7,7,7,7
+CD,9,Blue 2,5435,Deep,FALSE,FALSE,105.96,1,Excellent,FALSE,Red Card,Shallow,Robot stalled,1,1,3,3,3,3,3,3,8,8,0,0
+AB,9,Blue 3,1015,Park,FALSE,FALSE,130.17,5,Not Observed,FALSE,Red Card,None,,5,5,2,2,4,4,2,2,5,5,8,8
+AB,10,Red 1,1783,Shallow,TRUE,TRUE,22.29,3,Excellent,FALSE,Red Card,Shallow,,4,4,3,3,3,3,4,4,4,4,5,5
+GH,10,Red 2,1015,Deep,FALSE,FALSE,131.69,1,Poor,FALSE,Yellow Card,Shallow,,1,1,5,5,3,3,5,5,6,6,3,3
+GH,10,Red 3,2955,Park,TRUE,TRUE,132.81,3,Poor,FALSE,Yellow Card,Park,Robot stalled,4,4,1,1,4,4,1,1,8,8,9,9
+IJ,10,Blue 1,9895,Park,FALSE,TRUE,136.01,3,Average,TRUE,No Card,Deep,Good match,2,2,3,3,5,5,1,1,9,9,10,10
+EF,10,Blue 2,5750,Deep,TRUE,FALSE,131.14,2,Excellent,FALSE,Red Card,None,Issues with scoring,1,1,1,1,0,0,0,0,2,2,10,10
+GH,10,Blue 3,5435,Shallow,FALSE,TRUE,86.14,5,Average,FALSE,Red Card,Park,Robot stalled,5,5,1,1,4,4,0,0,4,4,8,8
+CD,11,Red 1,5743,Park,TRUE,FALSE,29.58,3,Average,FALSE,Yellow Card,Deep,Issues with scoring,2,2,1,1,1,1,5,5,2,2,10,10
+GH,11,Red 2,1783,Deep,FALSE,TRUE,27.1,5,Average,FALSE,No Card,Park,,2,2,0,0,1,1,1,1,5,5,1,1
+AB,11,Red 3,5435,Deep,FALSE,TRUE,70.43,1,Excellent,TRUE,Yellow Card,None,Issues with scoring,4,4,3,3,2,2,4,4,7,7,0,0
+CD,11,Blue 1,8708,Deep,TRUE,FALSE,146.92,3,Excellent,FALSE,Red Card,Park,Robot stalled,1,1,0,0,3,3,4,4,4,4,10,10
+AB,11,Blue 2,7283,Shallow,FALSE,TRUE,24.38,2,Not Observed,TRUE,No Card,Deep,,2,2,1,1,5,5,1,1,0,0,10,10
+IJ,11,Blue 3,6354,Park,TRUE,TRUE,144.76,4,Poor,TRUE,Red Card,Deep,Good match,0,0,0,0,0,0,2,2,7,7,2,2
+CD,12,Red 1,2955,Park,FALSE,FALSE,114.06,3,Excellent,TRUE,No Card,Park,Issues with scoring,1,1,5,5,3,3,1,1,5,5,7,7
+CD,12,Red 2,5750,Deep,FALSE,TRUE,128.26,5,Average,FALSE,No Card,None,Good match,5,5,2,2,0,0,3,3,5,5,5,5
+AB,12,Red 3,5743,Park,TRUE,FALSE,142.55,4,Poor,TRUE,Yellow Card,Deep,,2,2,2,2,3,3,0,0,1,1,5,5
+EF,12,Blue 1,9895,Shallow,TRUE,FALSE,60.05,5,Average,TRUE,No Card,None,Issues with scoring,3,3,5,5,0,0,3,3,0,0,5,5
+GH,12,Blue 2,1783,Deep,FALSE,TRUE,134.11,2,Good,FALSE,Yellow Card,Shallow,,5,5,1,1,3,3,5,5,0,0,8,8
+EF,12,Blue 3,8219,Deep,FALSE,FALSE,48.55,3,Excellent,FALSE,Red Card,Shallow,Good match,0,0,1,1,4,4,2,2,10,10,6,6
+AB,13,Red 1,1015,Park,FALSE,TRUE,86.33,4,Poor,FALSE,Red Card,Deep,Good match,1,1,4,4,2,2,2,2,5,5,2,2
+IJ,13,Red 2,2955,Deep,FALSE,TRUE,134.76,3,Average,FALSE,No Card,Deep,,3,3,4,4,5,5,4,4,3,3,3,3
+IJ,13,Red 3,9895,Shallow,FALSE,FALSE,74.49,3,Good,FALSE,No Card,Deep,,3,3,0,0,2,2,5,5,5,5,0,0
+EF,13,Blue 1,7283,Deep,FALSE,FALSE,97.83,3,Good,FALSE,Yellow Card,Deep,Good match,1,1,5,5,1,1,0,0,10,10,5,5
+CD,13,Blue 2,5435,Shallow,TRUE,FALSE,66.51,4,Good,FALSE,Red Card,Deep,Good match,0,0,1,1,2,2,3,3,3,3,5,5
+AB,13,Blue 3,8708,Deep,TRUE,TRUE,147.16,4,Excellent,TRUE,No Card,Deep,Good match,3,3,2,2,4,4,5,5,9,9,6,6
+EF,14,Red 1,9895,Deep,TRUE,FALSE,76.33,1,Excellent,TRUE,No Card,Shallow,,5,5,5,5,1,1,4,4,10,10,3,3
+CD,14,Red 2,1783,Deep,FALSE,TRUE,8.24,1,Excellent,TRUE,No Card,Shallow,Robot stalled,0,0,2,2,4,4,2,2,9,9,4,4
+EF,14,Red 3,6354,Deep,FALSE,FALSE,126.55,2,Poor,TRUE,No Card,None,,0,0,4,4,4,4,4,4,0,0,6,6
+IJ,14,Blue 1,8708,Deep,FALSE,TRUE,59.18,4,Good,TRUE,No Card,Park,Robot stalled,1,1,4,4,3,3,2,2,6,6,4,4
+IJ,14,Blue 2,8219,Park,FALSE,TRUE,114.2,1,Good,FALSE,Red Card,Park,Good match,3,3,5,5,1,1,0,0,4,4,4,4
+GH,14,Blue 3,5743,Park,TRUE,FALSE,132.64,4,Excellent,FALSE,Yellow Card,Park,,4,4,0,0,2,2,2,2,10,10,3,3
+GH,15,Red 1,8219,Deep,TRUE,TRUE,123.43,2,Average,FALSE,No Card,Shallow,Good match,4,4,0,0,3,3,2,2,3,3,1,1
+CD,15,Red 2,1783,Shallow,TRUE,TRUE,113.71,3,Average,FALSE,No Card,Park,Good match,2,2,4,4,4,4,0,0,2,2,10,10
+IJ,15,Red 3,9895,Deep,FALSE,FALSE,126.66,4,Average,TRUE,Red Card,Deep,Good match,5,5,1,1,4,4,4,4,0,0,7,7
+AB,15,Blue 1,5750,Park,TRUE,FALSE,46.02,3,Not Observed,FALSE,Yellow Card,Deep,Good match,5,5,2,2,1,1,5,5,6,6,7,7
+AB,15,Blue 2,8708,Shallow,TRUE,TRUE,4.56,2,Poor,TRUE,Yellow Card,Park,Robot stalled,1,1,1,1,1,1,5,5,5,5,1,1
+AB,15,Blue 3,7283,Shallow,TRUE,FALSE,149.28,1,Poor,FALSE,Yellow Card,Shallow,Good match,3,3,1,1,1,1,5,5,3,3,4,4
+CD,16,Red 1,8708,Deep,FALSE,FALSE,5.89,1,Poor,FALSE,Yellow Card,Shallow,Issues with scoring,4,4,1,1,1,1,3,3,5,5,3,3
+AB,16,Red 2,6354,Shallow,TRUE,FALSE,38.92,3,Poor,TRUE,Yellow Card,Park,Robot stalled,5,5,0,0,5,5,5,5,10,10,9,9
+GH,16,Red 3,8219,Shallow,FALSE,FALSE,6.53,1,Excellent,FALSE,Red Card,Deep,,2,2,0,0,2,2,2,2,9,9,6,6
+EF,16,Blue 1,2955,Shallow,FALSE,TRUE,52.33,1,Good,FALSE,No Card,Shallow,Good match,3,3,5,5,1,1,4,4,9,9,7,7
+AB,16,Blue 2,7283,Deep,TRUE,TRUE,110.85,3,Not Observed,TRUE,Red Card,None,,3,3,0,0,1,1,5,5,7,7,0,0
+EF,16,Blue 3,5743,Shallow,TRUE,FALSE,138.47,3,Not Observed,TRUE,No Card,None,Good match,5,5,4,4,0,0,1,1,6,6,7,7
+IJ,17,Red 1,1783,Park,FALSE,TRUE,41.65,3,Not Observed,FALSE,No Card,Deep,Issues with scoring,5,5,5,5,3,3,1,1,5,5,3,3
+EF,17,Red 2,1015,Park,FALSE,FALSE,112.9,2,Not Observed,FALSE,Yellow Card,None,Robot stalled,1,1,4,4,1,1,3,3,5,5,3,3
+AB,17,Red 3,2955,Park,FALSE,TRUE,85.35,3,Average,FALSE,No Card,Shallow,Issues with scoring,2,2,5,5,5,5,2,2,6,6,5,5
+IJ,17,Blue 1,6354,Deep,TRUE,FALSE,101.07,5,Not Observed,TRUE,Red Card,None,Robot stalled,1,1,5,5,0,0,5,5,8,8,8,8
+EF,17,Blue 2,1670,Deep,FALSE,FALSE,89.17,4,Excellent,FALSE,No Card,None,Issues with scoring,1,1,5,5,0,0,0,0,9,9,9,9
+AB,17,Blue 3,5743,Shallow,FALSE,TRUE,136.72,2,Not Observed,FALSE,Red Card,Deep,Robot stalled,1,1,2,2,5,5,4,4,4,4,1,1
+IJ,18,Red 1,5435,Shallow,FALSE,FALSE,65.84,3,Not Observed,TRUE,No Card,None,,2,2,1,1,0,0,5,5,7,7,1,1
+EF,18,Red 2,1670,Shallow,FALSE,FALSE,18.24,3,Average,TRUE,Yellow Card,Park,Good match,5,5,5,5,4,4,0,0,0,0,10,10
+AB,18,Red 3,8708,Park,TRUE,TRUE,47.32,3,Average,FALSE,Yellow Card,Park,Issues with scoring,3,3,4,4,0,0,3,3,7,7,6,6
+IJ,18,Blue 1,2955,Shallow,FALSE,FALSE,114.86,4,Poor,FALSE,No Card,Park,Robot stalled,1,1,3,3,4,4,0,0,3,3,9,9
+EF,18,Blue 2,6354,Deep,FALSE,FALSE,77,3,Average,TRUE,Yellow Card,Park,Good match,1,1,1,1,4,4,4,4,3,3,6,6
+AB,18,Blue 3,8219,Deep,FALSE,TRUE,9.81,5,Poor,FALSE,No Card,None,Good match,5,5,3,3,2,2,0,0,5,5,2,2
+CD,19,Red 1,8219,Park,TRUE,TRUE,67.01,4,Good,TRUE,No Card,None,Robot stalled,0,0,3,3,1,1,4,4,3,3,8,8
+EF,19,Red 2,1783,Park,TRUE,FALSE,43.83,5,Poor,FALSE,Red Card,Deep,,5,5,0,0,4,4,5,5,6,6,8,8
+IJ,19,Red 3,5750,Park,FALSE,TRUE,147.68,1,Poor,TRUE,No Card,Park,,1,1,3,3,4,4,2,2,2,2,2,2
+CD,19,Blue 1,1015,Shallow,FALSE,FALSE,49.97,2,Average,FALSE,Red Card,Park,Robot stalled,3,3,4,4,2,2,2,2,4,4,9,9
+CD,19,Blue 2,7283,Park,TRUE,TRUE,133.82,3,Average,FALSE,Yellow Card,Shallow,Good match,1,1,4,4,5,5,3,3,1,1,3,3
+AB,19,Blue 3,2955,Park,TRUE,FALSE,37.87,4,Excellent,TRUE,No Card,Park,Issues with scoring,4,4,1,1,3,3,4,4,6,6,5,5
+AB,20,Red 1,8708,Deep,FALSE,FALSE,29.69,4,Not Observed,TRUE,Red Card,None,Robot stalled,2,2,4,4,4,4,2,2,2,2,7,7
+AB,20,Red 2,9895,Park,FALSE,FALSE,145.94,5,Poor,TRUE,Red Card,Shallow,Issues with scoring,1,1,4,4,4,4,4,4,3,3,4,4
+IJ,20,Red 3,5750,Shallow,FALSE,FALSE,63.69,1,Not Observed,TRUE,Yellow Card,Deep,Good match,2,2,4,4,5,5,0,0,3,3,9,9
+IJ,20,Blue 1,5743,Deep,FALSE,TRUE,102.67,1,Excellent,FALSE,Yellow Card,Park,Robot stalled,4,4,4,4,3,3,5,5,8,8,8,8
+IJ,20,Blue 2,1670,Park,FALSE,TRUE,55.43,2,Excellent,TRUE,Red Card,None,,0,0,4,4,0,0,0,0,5,5,6,6
+IJ,20,Blue 3,8219,Deep,TRUE,TRUE,105.66,5,Excellent,FALSE,Yellow Card,Deep,Issues with scoring,1,1,3,3,2,2,3,3,6,6,5,5
+CD,21,Red 1,8708,Deep,FALSE,FALSE,97.66,1,Excellent,TRUE,Red Card,Shallow,Good match,5,5,3,3,0,0,4,4,5,5,6,6
+GH,21,Red 2,1015,Shallow,TRUE,FALSE,75.38,3,Average,FALSE,Red Card,Park,,5,5,2,2,1,1,3,3,9,9,6,6
+IJ,21,Red 3,8219,Park,TRUE,FALSE,58.6,5,Excellent,FALSE,Red Card,Park,,5,5,0,0,3,3,5,5,5,5,0,0
+EF,21,Blue 1,7283,Shallow,TRUE,TRUE,51.4,5,Average,FALSE,Yellow Card,Shallow,Good match,5,5,4,4,3,3,2,2,6,6,9,9
+AB,21,Blue 2,9895,Park,FALSE,TRUE,62.72,2,Average,TRUE,Red Card,Deep,Good match,4,4,2,2,3,3,4,4,9,9,8,8
+EF,21,Blue 3,5435,Park,FALSE,TRUE,113.46,3,Excellent,TRUE,Red Card,Park,Good match,3,3,2,2,0,0,1,1,7,7,8,8
+CD,22,Red 1,8708,Shallow,TRUE,TRUE,147.05,5,Average,TRUE,Red Card,None,Issues with scoring,2,2,2,2,4,4,0,0,1,1,9,9
+GH,22,Red 2,1015,Park,TRUE,TRUE,113.6,1,Good,FALSE,No Card,Deep,Robot stalled,2,2,3,3,2,2,2,2,4,4,5,5
+CD,22,Red 3,5743,Park,TRUE,TRUE,35.77,1,Not Observed,TRUE,Red Card,Park,Good match,5,5,3,3,1,1,5,5,3,3,4,4
+CD,22,Blue 1,5435,Deep,TRUE,FALSE,88.07,4,Good,FALSE,Red Card,Shallow,Robot stalled,3,3,4,4,5,5,0,0,5,5,6,6
+CD,22,Blue 2,5750,Shallow,FALSE,TRUE,134.18,2,Not Observed,FALSE,No Card,Shallow,Issues with scoring,0,0,4,4,1,1,4,4,4,4,7,7
+CD,22,Blue 3,8219,Park,TRUE,FALSE,114.71,3,Excellent,FALSE,Yellow Card,Deep,,4,4,4,4,4,4,4,4,6,6,2,2
+IJ,23,Red 1,1670,Shallow,TRUE,TRUE,148.5,3,Poor,TRUE,No Card,Shallow,Good match,3,3,2,2,1,1,0,0,5,5,3,3
+IJ,23,Red 2,1783,Park,TRUE,TRUE,12.3,5,Average,TRUE,Red Card,Shallow,Robot stalled,4,4,5,5,0,0,4,4,4,4,2,2
+IJ,23,Red 3,8708,Shallow,TRUE,FALSE,30.25,3,Poor,FALSE,Yellow Card,Shallow,Robot stalled,5,5,0,0,3,3,5,5,2,2,3,3
+CD,23,Blue 1,7283,Park,TRUE,TRUE,113.29,5,Good,FALSE,Red Card,Deep,Robot stalled,0,0,4,4,2,2,3,3,9,9,5,5
+IJ,23,Blue 2,5435,Park,FALSE,FALSE,117.14,1,Not Observed,TRUE,No Card,Park,Good match,4,4,5,5,2,2,5,5,5,5,8,8
+GH,23,Blue 3,6354,Deep,TRUE,TRUE,126.41,2,Average,FALSE,Yellow Card,Shallow,Robot stalled,1,1,5,5,3,3,1,1,7,7,2,2
+EF,24,Red 1,1015,Deep,TRUE,TRUE,9.87,1,Average,FALSE,Red Card,Park,Robot stalled,5,5,4,4,5,5,0,0,3,3,4,4
+GH,24,Red 2,8219,Deep,FALSE,FALSE,45.22,5,Good,FALSE,No Card,Deep,Good match,5,5,1,1,2,2,3,3,8,8,1,1
+AB,24,Red 3,2955,Shallow,FALSE,FALSE,33.86,4,Not Observed,TRUE,Yellow Card,Shallow,Good match,3,3,0,0,1,1,0,0,5,5,9,9
+AB,24,Blue 1,1783,Park,TRUE,FALSE,129.45,2,Average,TRUE,Yellow Card,None,,5,5,3,3,2,2,3,3,9,9,0,0
+EF,24,Blue 2,5743,Shallow,FALSE,FALSE,82.43,5,Average,FALSE,No Card,Deep,Issues with scoring,5,5,0,0,0,0,4,4,2,2,10,10
+GH,24,Blue 3,5435,Shallow,FALSE,TRUE,111.89,1,Average,FALSE,No Card,Deep,Issues with scoring,3,3,5,5,4,4,4,4,2,2,5,5
+AB,25,Red 1,5435,Shallow,FALSE,TRUE,25.36,1,Excellent,FALSE,Yellow Card,None,Issues with scoring,3,3,0,0,5,5,5,5,4,4,7,7
+IJ,25,Red 2,9895,Shallow,TRUE,FALSE,94.45,5,Not Observed,FALSE,No Card,Park,,2,2,0,0,2,2,0,0,8,8,0,0
+CD,25,Red 3,7283,Deep,FALSE,FALSE,60.24,3,Not Observed,FALSE,Yellow Card,Deep,Robot stalled,0,0,3,3,2,2,1,1,10,10,3,3
+CD,25,Blue 1,1670,Deep,FALSE,TRUE,114.01,2,Average,TRUE,Red Card,Park,Issues with scoring,4,4,4,4,5,5,2,2,3,3,5,5
+CD,25,Blue 2,5750,Deep,TRUE,FALSE,139.83,3,Excellent,TRUE,Yellow Card,Park,Good match,2,2,2,2,4,4,3,3,7,7,4,4
+AB,25,Blue 3,1015,Shallow,FALSE,TRUE,108.66,3,Poor,FALSE,No Card,Shallow,Issues with scoring,3,3,2,2,5,5,1,1,9,9,4,4
+GH,26,Red 1,1015,Deep,TRUE,TRUE,95.79,5,Poor,TRUE,No Card,None,Good match,4,4,5,5,4,4,1,1,8,8,6,6
+CD,26,Red 2,5750,Deep,FALSE,TRUE,35.39,2,Average,TRUE,Red Card,None,Issues with scoring,4,4,2,2,3,3,1,1,8,8,4,4
+IJ,26,Red 3,8708,Shallow,FALSE,TRUE,121.78,3,Good,FALSE,Yellow Card,Shallow,Issues with scoring,2,2,3,3,0,0,2,2,4,4,9,9
+EF,26,Blue 1,7283,Park,TRUE,FALSE,140.57,5,Excellent,FALSE,Yellow Card,Shallow,,4,4,1,1,1,1,0,0,6,6,6,6
+EF,26,Blue 2,9895,Deep,FALSE,FALSE,38.22,5,Average,TRUE,Yellow Card,Deep,Good match,1,1,4,4,2,2,0,0,6,6,6,6
+IJ,26,Blue 3,6354,Deep,FALSE,FALSE,24.96,4,Excellent,FALSE,Red Card,None,Robot stalled,4,4,1,1,0,0,0,0,1,1,10,10
+EF,27,Red 1,1670,Park,FALSE,TRUE,54.14,1,Excellent,FALSE,No Card,Park,Robot stalled,4,4,5,5,1,1,5,5,1,1,10,10
+GH,27,Red 2,7283,Shallow,TRUE,TRUE,72.06,2,Average,TRUE,Yellow Card,Deep,Robot stalled,4,4,3,3,2,2,0,0,0,0,5,5
+AB,27,Red 3,8219,Deep,TRUE,TRUE,19.51,1,Not Observed,FALSE,Red Card,Shallow,Robot stalled,3,3,0,0,0,0,2,2,2,2,8,8
+EF,27,Blue 1,2955,Shallow,TRUE,TRUE,128.8,2,Poor,FALSE,No Card,Deep,Good match,2,2,1,1,5,5,5,5,8,8,7,7
+AB,27,Blue 2,9895,Shallow,TRUE,FALSE,90.57,2,Good,TRUE,No Card,None,,5,5,1,1,4,4,1,1,3,3,2,2
+IJ,27,Blue 3,6354,Deep,FALSE,TRUE,33.99,3,Not Observed,TRUE,No Card,Shallow,Issues with scoring,5,5,5,5,1,1,2,2,2,2,7,7
+EF,28,Red 1,5435,Deep,FALSE,FALSE,149.03,2,Not Observed,FALSE,Red Card,Park,Good match,1,1,1,1,0,0,4,4,0,0,1,1
+IJ,28,Red 2,6354,Shallow,TRUE,TRUE,1.18,2,Good,FALSE,Red Card,Deep,Good match,3,3,4,4,4,4,4,4,1,1,0,0
+CD,28,Red 3,1783,Park,FALSE,FALSE,100.39,3,Excellent,TRUE,Yellow Card,None,Good match,2,2,3,3,3,3,1,1,0,0,7,7
+IJ,28,Blue 1,5743,Shallow,TRUE,FALSE,59.23,4,Not Observed,FALSE,No Card,Shallow,Good match,1,1,4,4,2,2,5,5,0,0,2,2
+AB,28,Blue 2,2955,Park,TRUE,FALSE,43.48,4,Not Observed,FALSE,Yellow Card,None,Robot stalled,5,5,4,4,2,2,0,0,0,0,10,10
+GH,28,Blue 3,5750,Deep,TRUE,TRUE,102.67,3,Excellent,FALSE,Yellow Card,Park,Good match,3,3,2,2,0,0,3,3,4,4,10,10
+CD,29,Red 1,1670,Deep,FALSE,FALSE,138.52,1,Excellent,FALSE,No Card,None,Good match,2,2,0,0,2,2,1,1,1,1,6,6
+IJ,29,Red 2,5435,Deep,TRUE,FALSE,97.04,1,Not Observed,TRUE,Red Card,None,Issues with scoring,0,0,3,3,2,2,5,5,2,2,2,2
+AB,29,Red 3,2955,Shallow,FALSE,FALSE,133.05,3,Not Observed,FALSE,Yellow Card,Shallow,Good match,2,2,5,5,0,0,1,1,4,4,2,2
+GH,29,Blue 1,5750,Shallow,TRUE,TRUE,103.22,1,Excellent,TRUE,Red Card,Shallow,Issues with scoring,3,3,5,5,2,2,2,2,3,3,6,6
+GH,29,Blue 2,5743,Park,FALSE,TRUE,63.49,3,Average,TRUE,Red Card,Shallow,Good match,5,5,5,5,3,3,1,1,8,8,4,4
+IJ,29,Blue 3,1783,Shallow,TRUE,TRUE,8.44,3,Not Observed,FALSE,Yellow Card,None,Good match,4,4,0,0,1,1,3,3,5,5,5,5
+EF,30,Red 1,1015,Shallow,TRUE,FALSE,6.44,3,Good,TRUE,Yellow Card,Park,Good match,0,0,4,4,3,3,2,2,0,0,2,2
+GH,30,Red 2,5750,Shallow,FALSE,TRUE,92.88,1,Poor,FALSE,Red Card,None,,4,4,0,0,2,2,2,2,2,2,7,7
+AB,30,Red 3,1670,Shallow,FALSE,FALSE,59.52,2,Average,FALSE,No Card,Deep,Robot stalled,3,3,2,2,1,1,5,5,6,6,1,1
+EF,30,Blue 1,6354,Shallow,FALSE,TRUE,19.97,3,Not Observed,FALSE,Yellow Card,Shallow,Robot stalled,5,5,2,2,4,4,0,0,10,10,7,7
+IJ,30,Blue 2,5743,Shallow,FALSE,FALSE,80.92,1,Not Observed,TRUE,No Card,Park,Good match,4,4,4,4,1,1,5,5,8,8,0,0
+IJ,30,Blue 3,1783,Deep,FALSE,FALSE,52.89,4,Poor,FALSE,Red Card,Park,Issues with scoring,2,2,5,5,1,1,5,5,8,8,9,9
+IJ,31,Red 1,8219,Shallow,TRUE,FALSE,54.44,1,Poor,FALSE,Red Card,Park,,0,0,2,2,2,2,1,1,4,4,9,9
+IJ,31,Red 2,1670,Park,FALSE,TRUE,112.38,1,Poor,FALSE,No Card,Park,Good match,3,3,2,2,5,5,4,4,4,4,8,8
+AB,31,Red 3,8708,Shallow,TRUE,FALSE,73,1,Not Observed,TRUE,Red Card,Shallow,Good match,4,4,5,5,4,4,0,0,2,2,5,5
+CD,31,Blue 1,6354,Shallow,TRUE,FALSE,33.05,1,Poor,TRUE,No Card,None,,5,5,3,3,2,2,2,2,9,9,8,8
+IJ,31,Blue 2,1015,Shallow,FALSE,FALSE,19.07,4,Poor,FALSE,Red Card,Deep,,3,3,1,1,2,2,4,4,2,2,8,8
+GH,31,Blue 3,5750,Deep,TRUE,TRUE,11.23,5,Good,TRUE,Yellow Card,Park,Good match,2,2,3,3,5,5,5,5,9,9,0,0
+EF,32,Red 1,5743,Deep,FALSE,FALSE,70.65,1,Not Observed,TRUE,Yellow Card,None,Robot stalled,5,5,2,2,3,3,5,5,9,9,7,7
+CD,32,Red 2,1783,Deep,FALSE,FALSE,4.11,4,Good,FALSE,Yellow Card,Park,Robot stalled,4,4,5,5,4,4,3,3,9,9,10,10
+CD,32,Red 3,1015,Park,TRUE,FALSE,33.43,1,Poor,TRUE,Yellow Card,Park,Robot stalled,3,3,0,0,5,5,3,3,0,0,4,4
+AB,32,Blue 1,1670,Park,FALSE,TRUE,128.65,5,Excellent,TRUE,No Card,Shallow,Issues with scoring,0,0,3,3,0,0,2,2,0,0,0,0
+CD,32,Blue 2,5750,Shallow,TRUE,FALSE,63.84,3,Good,TRUE,Red Card,Park,Good match,5,5,0,0,1,1,0,0,5,5,2,2
+CD,32,Blue 3,5435,Park,FALSE,FALSE,21.54,4,Good,TRUE,Yellow Card,None,Issues with scoring,1,1,2,2,1,1,1,1,9,9,8,8
+EF,33,Red 1,5750,Deep,FALSE,TRUE,40.57,3,Poor,FALSE,Red Card,None,Issues with scoring,3,3,5,5,1,1,0,0,10,10,8,8
+IJ,33,Red 2,8708,Deep,TRUE,TRUE,97.31,4,Poor,TRUE,Yellow Card,Shallow,Issues with scoring,0,0,0,0,1,1,4,4,6,6,0,0
+CD,33,Red 3,1015,Shallow,TRUE,TRUE,84.65,5,Poor,TRUE,Red Card,None,,0,0,5,5,2,2,3,3,2,2,1,1
+GH,33,Blue 1,5743,Shallow,FALSE,FALSE,116.24,1,Average,FALSE,Red Card,Deep,,1,1,5,5,0,0,4,4,9,9,1,1
+EF,33,Blue 2,2955,Deep,FALSE,FALSE,53.73,3,Excellent,FALSE,No Card,Shallow,Robot stalled,3,3,0,0,2,2,2,2,1,1,0,0
+EF,33,Blue 3,7283,Park,TRUE,TRUE,15.18,3,Excellent,FALSE,Red Card,Park,Robot stalled,2,2,2,2,4,4,4,4,5,5,0,0
+CD,34,Red 1,9895,Deep,TRUE,FALSE,21.32,4,Not Observed,FALSE,No Card,Park,Issues with scoring,0,0,5,5,0,0,5,5,7,7,1,1
+IJ,34,Red 2,2955,Deep,TRUE,TRUE,4.93,5,Poor,FALSE,Red Card,Shallow,Issues with scoring,5,5,4,4,4,4,4,4,3,3,9,9
+IJ,34,Red 3,5750,Shallow,TRUE,TRUE,121.67,1,Excellent,FALSE,Yellow Card,Shallow,Good match,3,3,4,4,5,5,3,3,5,5,5,5
+AB,34,Blue 1,5435,Park,FALSE,TRUE,14.71,4,Poor,TRUE,No Card,Deep,Issues with scoring,4,4,1,1,1,1,4,4,7,7,7,7
+CD,34,Blue 2,1670,Shallow,FALSE,TRUE,61.63,5,Good,TRUE,Yellow Card,Park,Good match,4,4,5,5,5,5,1,1,1,1,5,5
+EF,34,Blue 3,6354,Park,TRUE,TRUE,101.37,2,Poor,FALSE,Yellow Card,Deep,,5,5,4,4,0,0,1,1,9,9,10,10
+EF,35,Red 1,1783,Park,FALSE,FALSE,104.14,4,Average,TRUE,Yellow Card,None,Robot stalled,2,2,5,5,2,2,5,5,10,10,5,5
+EF,35,Red 2,8708,Shallow,TRUE,TRUE,20.64,5,Excellent,FALSE,Yellow Card,None,Issues with scoring,2,2,0,0,3,3,5,5,2,2,5,5
+AB,35,Red 3,5743,Deep,TRUE,TRUE,107.81,3,Not Observed,TRUE,Yellow Card,Park,Good match,5,5,5,5,1,1,2,2,1,1,3,3
+CD,35,Blue 1,1015,Shallow,TRUE,TRUE,98.19,1,Good,FALSE,Red Card,Shallow,,2,2,1,1,3,3,2,2,2,2,1,1
+IJ,35,Blue 2,7283,Deep,TRUE,TRUE,149.62,1,Poor,FALSE,No Card,None,Issues with scoring,3,3,4,4,3,3,1,1,10,10,7,7
+AB,35,Blue 3,6354,Shallow,FALSE,TRUE,121.61,3,Excellent,FALSE,Red Card,Deep,Issues with scoring,5,5,2,2,1,1,2,2,4,4,0,0
+CD,36,Red 1,7283,Shallow,FALSE,FALSE,68.55,5,Good,FALSE,No Card,None,Good match,2,2,5,5,3,3,2,2,6,6,2,2
+CD,36,Red 2,5750,Park,TRUE,FALSE,72.19,5,Excellent,FALSE,No Card,Park,Issues with scoring,4,4,3,3,2,2,5,5,5,5,7,7
+GH,36,Red 3,8219,Park,TRUE,TRUE,112.42,5,Good,FALSE,Red Card,Shallow,Good match,1,1,2,2,1,1,1,1,2,2,10,10
+AB,36,Blue 1,1015,Shallow,TRUE,FALSE,136.37,2,Poor,TRUE,Yellow Card,Deep,Issues with scoring,3,3,1,1,3,3,1,1,7,7,7,7
+CD,36,Blue 2,6354,Park,TRUE,FALSE,90.51,3,Poor,FALSE,Red Card,Park,Good match,4,4,5,5,1,1,4,4,9,9,0,0
+GH,36,Blue 3,2955,Shallow,FALSE,TRUE,112.13,4,Good,TRUE,Yellow Card,Deep,,1,1,2,2,5,5,0,0,9,9,5,5
