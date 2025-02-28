@@ -23,7 +23,7 @@ df["totalAutoPoints"] = df["totalAutoCoralPoints"] + df["totalAutoAlgaePoints"]
 
 df["algaeTeleop"] = df["teleopAlgaeNet"] + df["teleopAlgaeProc"]
 df["algaeAuto"] = df["autoAlgaeNet"] + df["autoAlgaeProc"]
-#####---------------------------------------------------------------------------------------------------------------------
+
 position = df["bargeStatus"]
 df["endgamePoints"] = np.where(position == "Parked", 2, np.where(position == "Shallow Cage", 6, np.where(position == "Deep  Cage", 12, 0)))
 
