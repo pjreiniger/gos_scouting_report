@@ -6,57 +6,67 @@ import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
 
-import pandas as pd
-import matplotlib.pyplot as plt
-import plotly.express as px
-import plotly.graph_objects as go
-import numpy as np
-
 # read in data
-df = pd.read_csv("C:/Users/sienn/Downloads/frc_good_mock_data.csv")
+df = pd.read_csv("frc_mock_data_updated.csv")
 
 # add new columns
-df["Coral Total Teleop"] = df["Coral L1 Teleop"] + df["Coral L2 Teleop"] + df["Coral L3 Teleop"] + df["Coral L4 Teleop"]
-df["Coral Total Auto"] = df["Coral L1 Auto"] + df["Coral L2 Auto"] + df["Coral L3 Auto"] + df["Coral L4 Auto"]
+df["totalTeleopCoral"] = df["teleopCoralL1"] + df["teleopCoralL2"] + df["teleopCoralL3"] + df["teleopCoralL4"]
+df["totalAutoCoral"] = df["autoCoralL1"] + df["autoCoralL2"] + df["autoCoralL3"] + df["autoCoralL4"]
 
-df["Coral Total Points Teleop"] = df["Coral L1 Teleop"]*2 + df["Coral L2 Teleop"]*3 + df["Coral L3 Teleop"]*4 + df["Coral L4 Teleop"]*5
-df["Algae Total Points Teleop"] = df["Algae in Net Teleop"]*4 + df["Algae in Processor Teleop"]*6
-df["Total Teleop Points"] = df["Coral Total Points Teleop"] + df["Algae Total Points Teleop"]
+df["totalTeleopCoralPoints"] = df["teleopCoralL1"]*2 + df["teleopCoralL2"]*3 + df["teleopCoralL3"]*4 + df["teleopCoralL4"]*5
+df["totalTeleopAlgaePoints"] = df["teleopAlgaeNet"]*4 + df["teleopAlgaeProc"]*6
+df["totalTeleopPoints"] = df["totalTeleopCoralPoints"] + df["totalTeleopAlgaePoints"]
 
-df["Coral Total Points Auto"] = df["Coral L1 Auto"]*3 + df["Coral L2 Auto"]*4 + df["Coral L3 Auto"]*6 + df["Coral L4 Auto"]*7
-df["Algae Total Points Auto"] = df["Algae in Net Auto"]*4 + df["Algae in Processor Auto"]*6
-df["Total Auto Points"] = df["Coral Total Points Auto"] + df["Algae Total Points Auto"]
+df["totalAutoCoralPoints"] = df["autoCoralL1"]*3 + df["autoCoralL2"]*4 + df["autoCoralL3"]*6 + df["autoCoralL4"]*7
+df["totalAutoAlgaePoints"] = df["autoAlgaeNet"]*4 + df["autoAlgaeProc"]*6
+df["totalAutoPoints"] = df["totalAutoCoralPoints"] + df["totalAutoAlgaePoints"]
 
-df["Algae in Net and Processor Teleop"] = df["Algae in Net Teleop"] + df["Algae in Processor Teleop"]
-df["Algae in Net and Processor Auto"] = df["Algae in Net Auto"] + df["Algae in Processor Auto"]
-position = df["End Position"]
-df["Endgame Points"] = np.where(position == "Park", 2, np.where(position == "Shallow", 6, np.where(position == "Deep", 12, 0)))
+df["algaeTeleop"] = df["teleopAlgaeNet"] + df["teleopAlgaeProc"]
+df["algaeAuto"] = df["autoAlgaeNet"] + df["autoAlgaeProc"]
+#####---------------------------------------------------------------------------------------------------------------------
+position = df["bargeStatus"]
+df["endgamePoints"] = np.where(position == "Parked", 2, np.where(position == "Shallow Cage", 6, np.where(position == "Deep  Cage", 12, 0)))
 
 
-df["Total Points Scored"] = df["Total Teleop Points"] + df["Total Auto Points"] + df["Endgame Points"]
+df["totalPointsScored"] = df["totalTeleopPoints"] + df["totalAutoPoints"] + df["endgamePoints"]
+
+# update team name
+df["team_key"] = df["team_key"].str[3:]
 
 # upcoming alliance lineup
-red_teams = [5743, 5750, 1783]
-blue_teams = [2955, 9895, 8219]
+red_teams = ["2172", "291", "3504"]
+blue_teams = ["3260", "117", "4467"]
 all_teams = red_teams + blue_teams
 
-# filter df by team number
-new_df = df.loc[df["Team Number"].isin(all_teams)]
+# filter df by team_key
+new_df = df.loc[df["team_key"].isin(all_teams)]
+new_df["colorGroup"] = new_df["team_key"].apply(lambda x: "Red" if x in red_teams else "Blue")
 
 # averages df
-averages_by_team = new_df.groupby("Team Number").mean(numeric_only=True).reset_index()
-print(averages_by_team)
-print(new_df)
+averages_by_team = new_df.groupby("team_key").mean(numeric_only=True).reset_index()
+averages_by_team_all = df.groupby("team_key").mean(numeric_only=True).reset_index()
+
+teams = averages_by_team["team_key"]
 
 # endgame df
-endgame_df = new_df.groupby('Team Number')['End Position'].value_counts().unstack(fill_value=0).reset_index()
-print(endgame_df)
+endgame_df = new_df.groupby('team_key')['bargeStatus'].value_counts().unstack(fill_value=0).reset_index()
 
-# color map
+# color coding
+ticktext = [
+    f"<span style='color:{'red' if team in red_teams else 'blue'}'>{team}</span>"
+    for team in all_teams
+]
+
+new_df = new_df.sort_values(["colorGroup", "team_key"], ascending=[True, True])
+
 color_map = {str(team): "#FF5733" for team in red_teams}  # Red teams
 color_map.update({str(team): "#1F77B4" for team in blue_teams})  # Blue teams
-ticktext = [f'<span style="color:{color_map[team]};">{team}</span>' for team in ]
 
+def color_picker(team_num):
+            if team_num in red_teams:
+                return "red"
+            else:
+                return "blue"
 
 # Define the UI
 app_ui = ui.page_navbar(
@@ -117,10 +127,10 @@ def server(input, output, session):
     @render.ui
     def total_points_boxplot():
         fig = px.box(new_df, 
-                    x="Team Number Str", 
-                    y="Total Points Scored", 
-                    color="Team Number Str",
-                    category_orders={"Team Number Str": new_df["Team Number Str"].tolist()},  # Ensure x-axis is ordered
+                    x="team_key", 
+                    y="totalPointsScored", 
+                    color="team_key",
+                    category_orders={"team_key": new_df["team_key"].tolist()},  # Ensure x-axis is ordered
                     color_discrete_map=color_map
                     )
 
@@ -129,8 +139,8 @@ def server(input, output, session):
             xaxis=dict(
                 title="Team",
                 tickmode="array",
-                tickvals=new_df["Team Number Str"].tolist(),
-                ticktext=new_df["Team Number Str"].tolist(),
+                tickvals=new_df["team_key"].tolist(),
+                ticktext=new_df["team_key"].tolist(),
                 tickfont=dict(size=14)
             )
         )
@@ -141,20 +151,20 @@ def server(input, output, session):
     @render.ui
     def coral_algae_teleop_scatter():
 
-        def color_picker(team_num, red_teams):
+        def color_picker(team_num):
             if team_num in red_teams:
                 return "red"
             else:
                 return "blue"
 
-        x = averages_by_team["Coral Total Teleop"]
-        y = averages_by_team["Algae in Net and Processor Teleop"]
-        teams = averages_by_team["Team Number"]
+        x = averages_by_team["totalTeleopCoral"]
+        y = averages_by_team["algaeTeleop"]
+        teams = averages_by_team["team_key"]
 
         fig = px.scatter(x=x, y=y, text=teams, labels={'x': "Avg Coral Scored", 'y': "Avg Algae Scored in Net"},
                         title="Coral vs Algae TELEOP")
 
-        colors = [color_picker(team, red_teams) for team in teams]
+        colors = [color_picker(team) for team in teams]
         fig.update_traces(marker=dict(color=colors,
                                     symbol='circle', size=10),
                         textposition="middle left")
@@ -164,15 +174,15 @@ def server(input, output, session):
     @output
     @render.ui
     def teleop_auto_points_scatter():
-        x = averages_by_team["Total Teleop Points"]
-        y = averages_by_team["Total Auto Points"]
+        x = averages_by_team["totalTeleopPoints"]
+        y = averages_by_team["totalAutoPoints"]
 
         # Create the plot
-        fig = px.scatter(x=x, y=y, text=teams, labels={'x': "Total Teleop Points", 'y': "Total Auto Points"},
+        fig = px.scatter(x=x, y=y, text=teams, labels={'x': "totalTeleopPoints", 'y': "totalAutoPoints"},
                         title="Teleop vs Auto Points")
 
-        # Add custom color for each point based on the team number
-        colors = [color_picker(team, red_teams) for team in teams]  # Apply color_picker correctly
+        # Add custom color for each point based on the team_key
+        colors = [color_picker(team) for team in teams]  # Apply color_picker correctly
         fig.update_traces(marker=dict(color=colors,
                                     symbol='circle', size=10),
                         textposition="middle left")
@@ -182,10 +192,16 @@ def server(input, output, session):
     @output
     @render.ui
     def net_processor_teleop():
+        # Step 1: Convert team_keys to string
+        averages_by_team["team_key"] = averages_by_team["team_key"].astype(str)
+
+        # Step 2: Sort teams by colorGroup (if needed)
+        averages_by_team["colorGroup"] = averages_by_team["team_key"].apply(lambda x: "Red" if x in red_teams else "Blue")
+
         # Step 3: Define x-axis values
-        x = averages_by_team["Team Number"]
-        y1 = averages_by_team["Algae in Net Teleop"]
-        y2 = averages_by_team["Algae in Processor Teleop"]
+        x = averages_by_team["team_key"]
+        y1 = averages_by_team["teleopAlgaeNet"]
+        y2 = averages_by_team["teleopAlgaeProc"]
 
         # Step 4: Define colors for x-axis labels
         color_map = {str(team): "#FF5733" for team in red_teams}  # Red teams
@@ -233,24 +249,26 @@ def server(input, output, session):
     @output
     @render.ui
     def coral_algae_auto_scatter():
-        x = averages_by_team["Coral Total Auto"]
-        y = averages_by_team["Algae in Net and Processor Auto"]
-        teams = averages_by_team["Team Number"]
+        x = averages_by_team["totalAutoCoral"]
+        y = averages_by_team["algaeAuto"]
+        teams = averages_by_team["team_key"]
 
         fig = px.scatter(x=x, y=y, text=teams, labels={'x': "Avg Coral Scored", 'y': "Avg Algae Scored in Net"}, title="Coral vs Algae AUTO")
 
-        colors = [color_picker(team, red_teams) for team in teams]  # Apply color_picker correctly
+        colors = [color_picker(team) for team in teams]  # Apply color_picker correctly
         fig.update_traces(marker=dict(color=colors, symbol='circle', size=10), textposition="middle left") 
         return ui.HTML(fig.to_html(full_html=False)) 
 
     @output
     @render.ui
     def coral_level_distribution_teleop_bar():
-        x = averages_by_team["Team Number"]
-        y1 = averages_by_team["Coral L1 Teleop"]
-        y2 = averages_by_team["Coral L2 Teleop"]
-        y3 = averages_by_team["Coral L3 Teleop"]
-        y4 = averages_by_team["Coral L4 Teleop"]
+        # coral level distribution -- stacked bar graph
+        averages_by_team["team_key"] = averages_by_team["team_key"].astype(str)
+        x = averages_by_team["team_key"]
+        y1 = averages_by_team["teleopCoralL1"]
+        y2 = averages_by_team["teleopCoralL2"]
+        y3 = averages_by_team["teleopCoralL3"]
+        y4 = averages_by_team["teleopCoralL4"]
 
         fig = go.Figure()
 
@@ -301,12 +319,13 @@ def server(input, output, session):
     @output
     @render.ui
     def coral_level_distribution_auto_bar():
-        averages_by_team["Team Number"] = averages_by_team["Team Number"].astype(str)
-        x = averages_by_team["Team Number"]
-        y1 = averages_by_team["Coral L1 Teleop"]
-        y2 = averages_by_team["Coral L2 Teleop"]
-        y3 = averages_by_team["Coral L3 Teleop"]
-        y4 = averages_by_team["Coral L4 Teleop"]
+        # coral level distribution -- stacked bar graph
+        averages_by_team["team_key"] = averages_by_team["team_key"].astype(str)
+        x = averages_by_team["team_key"]
+        y1 = averages_by_team["autoCoralL1"]
+        y2 = averages_by_team["autoCoralL2"]
+        y3 = averages_by_team["autoCoralL3"]
+        y4 = averages_by_team["autoCoralL4"]
 
         fig = go.Figure()
 
@@ -348,7 +367,7 @@ def server(input, output, session):
                 tickfont=dict(size=14)  # Adjust font size if needed
             ),
             yaxis_title="Avg Coral in L1, L2, L3, L4",
-            title="Coral Level Distribution Teleop",
+            title="Coral Level Distribution Auto",
             legend_title="Coral Levels",
             template="plotly_white"
         )
@@ -359,12 +378,12 @@ def server(input, output, session):
     @render.ui
     def coral_point_distribution_teleop_bar():
         # coral level distribution -- stacked bar graph
-        averages_by_team["Team Number"] = averages_by_team["Team Number"].astype(str)
-        x = averages_by_team["Team Number"]
-        y1 = averages_by_team["Coral L1 Teleop"]*2
-        y2 = averages_by_team["Coral L2 Teleop"]*3
-        y3 = averages_by_team["Coral L3 Teleop"]*4
-        y4 = averages_by_team["Coral L4 Teleop"]*5
+        averages_by_team["team_key"] = averages_by_team["team_key"].astype(str)
+        x = averages_by_team["team_key"]
+        y1 = averages_by_team["teleopCoralL1"]*2
+        y2 = averages_by_team["teleopCoralL2"]*3
+        y3 = averages_by_team["teleopCoralL3"]*4
+        y4 = averages_by_team["teleopCoralL4"]*5
 
         fig = go.Figure()
 
@@ -414,12 +433,12 @@ def server(input, output, session):
     @output
     @render.ui
     def endgame_bar():
-        # Convert "Team Number" to string if not already done
-        endgame_df["Team Number"] = endgame_df["Team Number"].astype(str)
-        x = endgame_df["Team Number"]
-        y1 = endgame_df["Park"]
-        y2 = endgame_df["Shallow"]
-        y3 = endgame_df["Deep"]
+        # Convert "team_key" to string if not already done
+        endgame_df["team_key"] = endgame_df["team_key"].astype(str)
+        x = endgame_df["team_key"]
+        y1 = endgame_df["Parked"]
+        y2 = endgame_df["Shallow Cage"]
+        y3 = endgame_df["Deep Cage"]
 
         # Create the bar graph
         fig = go.Figure()
@@ -470,7 +489,7 @@ def server(input, output, session):
     @output
     @render.data_frame
     def key_stats_dt():
-        return averages_by_team  
+        return averages_by_team_all  
     
 
 app = App(app_ui, server)
