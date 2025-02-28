@@ -41,6 +41,10 @@ jobs:
       - name: Pip Install
         run: pip3 install -r requirements.txt
 
+      # Shiny export gets wierd if shinylive is in requirements
+      - name: Pip Install shinylive
+        run: pip3 install shinylive
+
       - name: Export Shiny App
         run: shinylive export . site
 
