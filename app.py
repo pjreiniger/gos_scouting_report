@@ -1,13 +1,13 @@
-from functools import partial
 from shiny import App, ui, render
 import pandas as pd
-import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
+import os
 
 # read in data
-df = pd.read_csv("frc_mock_data_updated.csv")
+this_dir = os.path.dirname(os.path.realpath(__file__))
+df = pd.read_csv(this_dir + "/frc_mock_data_updated.csv")
 
 # add new columns
 df["totalTeleopCoral"] = df["teleopCoralL1"] + df["teleopCoralL2"] + df["teleopCoralL3"] + df["teleopCoralL4"]
