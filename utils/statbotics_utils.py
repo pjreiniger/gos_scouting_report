@@ -45,7 +45,7 @@ def statbotics_matches_json_to_dataframe(json_data: Dict[str, Any]) -> pd.DataFr
     """
 
     # There is nothing interesting to precalculate, so we just shove the json into a dataframe
-    return pd.DataFrame(json_data)
+    return pd.json_normalize(json_data)
 
 
 ############################################
@@ -94,7 +94,7 @@ def statbotics_teams_json_to_dataframe(json_data: Dict[str, Any]) -> pd.DataFram
     :param json_data: The json dictionary
     :return: The data frame
     """
-    output = pd.DataFrame(json_data)
+    output = pd.json_normalize(json_data)
 
     return output
 
