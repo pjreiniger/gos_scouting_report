@@ -1,13 +1,11 @@
-from functools import partial
 from shiny import App, ui, render
 import pandas as pd
-import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
 
 # read in data
-df = pd.read_csv("frc_mock_data_updated.csv")
+df = pd.read_csv("data/2025txwac/match_scouting.csv")
 
 # add new columns
 df["totalTeleopCoral"] = df["teleopCoralL1"] + df["teleopCoralL2"] + df["teleopCoralL3"] + df["teleopCoralL4"]
@@ -34,8 +32,9 @@ df["totalPointsScored"] = df["totalTeleopPoints"] + df["totalAutoPoints"] + df["
 df["team_key"] = df["team_key"].str[3:]
 
 # upcoming alliance lineup
-red_teams = ["2172", "291", "3504"]
-blue_teams = ["3260", "117", "4467"]
+
+red_teams = ["8408", "2881", "2689"]
+blue_teams = ["8507", "2950", "148"]
 all_teams = red_teams + blue_teams
 
 # filter df by team_key
@@ -45,6 +44,8 @@ new_df["colorGroup"] = new_df["team_key"].apply(lambda x: "Red" if x in red_team
 # averages df
 averages_by_team = new_df.groupby("team_key").mean(numeric_only=True).reset_index()
 averages_by_team_all = df.groupby("team_key").mean(numeric_only=True).reset_index()
+
+print(averages_by_team)
 
 teams = averages_by_team["team_key"]
 
@@ -178,6 +179,8 @@ def server(input, output, session):
         y = averages_by_team["totalAutoPoints"]
 
         # Create the plot
+        print(x)
+        print(y)
         fig = px.scatter(x=x, y=y, text=teams, labels={'x': "totalTeleopPoints", 'y': "totalAutoPoints"},
                         title="Teleop vs Auto Points")
 

@@ -28,6 +28,33 @@ def download_scout_radioz_match_scouting(org_key, output_file):
     with open(output_file, 'wb') as f:
         f.write(content)
 
+    if org_key == "frc8749":
+        import pandas as pd
+        df = pd.read_csv(output_file)
+
+        df.rename(
+            inplace=True,
+            columns={
+                "teleCoralL1": "teleopCoralL1",
+                "teleCoralL2": "teleopCoralL2",
+                "teleCoralL3": "teleopCoralL3",
+                "teleCoralL4": "teleopCoralL4",
+                "teleAlgaeNet": "teleopAlgaeNet",
+                "teleAlgaeProcessor": "teleopAlgaeProc",
+                "autoAlgaeNet": "autoAlgaeNet",
+                "autoAlgaeProcessor": "autoAlgaeProc",
+                "endgameBarge": "bargeStatus",
+            },
+        )
+        lookup = df[df["bargeStatus"] == "Hanging on Deep Cage"].index
+        df.loc[lookup, "bargeStatus"] = "Deep Cage"
+
+        lookup = df[df["bargeStatus"] == "Hanging on Shallow Cage"].index
+        df.loc[lookup, "bargeStatus"] = "Shallow Cage"
+
+        df.to_csv(output_file, index=False)
+
+
 
 def request_scout_radioz_pit_scouting(org_key):
     url = "https://scoutradioz.com/reports/exportdata?type=pitscouting"
