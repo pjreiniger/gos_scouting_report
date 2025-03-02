@@ -19,15 +19,11 @@ def download_external_data(event):
     script_directory = pathlib.Path(__file__).resolve().parent
 
     data_directory = script_directory / "data" / event
+    data_directory.mkdir(parents=True)
 
-    # statbotics_matches_file =
-    # download_statbotics_matches(event, data_directory / "statbotics_matches.json")
-    #
-    # statbotics_teams_file =
-    # download_statbotics_event_teams(event, data_directory / "statbotics_teams.json")
-    #
-    # tba_matches_file =
-    # download_tba_event_matches(event, data_directory / "tba_matches.json")
+    download_statbotics_matches(event, data_directory / "statbotics_matches.json")
+    download_statbotics_event_teams(event, data_directory / "statbotics_teams.json")
+    download_tba_event_matches(event, data_directory / "tba_matches.json")
 
     org_key = "frc8749"
     download_scout_radioz_match_scouting(org_key, data_directory / "match_scouting.csv")
