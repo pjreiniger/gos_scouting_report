@@ -1,11 +1,14 @@
 import os
 import pathlib
+import requests
+
 
 from utils.statbotics_utils import (
     download_statbotics_matches,
     download_statbotics_event_teams,
 )
 from utils.tba_utils import download_tba_event_matches
+
 
 
 def download_external_data(event):
@@ -17,14 +20,17 @@ def download_external_data(event):
 
     data_directory = script_directory / "data" / event
 
-    statbotics_matches_file = data_directory / "statbotics_matches.json"
-    download_statbotics_matches(event, statbotics_matches_file)
+    # statbotics_matches_file =
+    # download_statbotics_matches(event, data_directory / "statbotics_matches.json")
+    #
+    # statbotics_teams_file =
+    # download_statbotics_event_teams(event, data_directory / "statbotics_teams.json")
+    #
+    # tba_matches_file =
+    # download_tba_event_matches(event, data_directory / "tba_matches.json")
 
-    statbotics_teams_file = data_directory / "statbotics_teams.json"
-    download_statbotics_event_teams(event, statbotics_teams_file)
-
-    tba_matches_file = data_directory / "tba_matches.json"
-    download_tba_event_matches(event, tba_matches_file)
+    org_key = "frc8749"
+    download_scout_radioz(org_key, data_directory / "scouted.csv")
 
 
 if __name__ == "__main__":
