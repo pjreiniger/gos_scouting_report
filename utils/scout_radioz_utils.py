@@ -16,27 +16,27 @@ def __make_request(url: str, org_key: str) -> bytes:
     return response.content
 
 
-def request_match_scouting(org_key):
+def request_scout_radioz_match_scouting(org_key):
     url = "https://scoutradioz.com/reports/exportdata?type=matchscouting"
 
     return __make_request(url, org_key)
 
 
-def download_match_scouting(org_key, output_file):
-    content = request_match_scouting(org_key)
+def download_scout_radioz_match_scouting(org_key, output_file):
+    content = request_scout_radioz_match_scouting(org_key)
 
     with open(output_file, 'wb') as f:
         f.write(content)
 
 
-def request_pit_scouting(org_key):
+def request_scout_radioz_pit_scouting(org_key):
     url = "https://scoutradioz.com/reports/exportdata?type=pitscouting"
 
     return __make_request(url, org_key)
 
 
-def download_pit_scouting(org_key, output_file):
-    content = request_pit_scouting(org_key)
+def download_scout_radioz_pit_scouting(org_key, output_file):
+    content = request_scout_radioz_pit_scouting(org_key)
 
     with open(output_file, 'wb') as f:
         f.write(content)

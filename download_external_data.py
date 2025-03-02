@@ -2,7 +2,7 @@ import os
 import pathlib
 import requests
 
-
+from utils.scout_radioz_utils import download_scout_radioz_match_scouting, download_scout_radioz_pit_scouting
 from utils.statbotics_utils import (
     download_statbotics_matches,
     download_statbotics_event_teams,
@@ -30,7 +30,8 @@ def download_external_data(event):
     # download_tba_event_matches(event, data_directory / "tba_matches.json")
 
     org_key = "frc8749"
-    download_scout_radioz(org_key, data_directory / "scouted.csv")
+    download_scout_radioz_match_scouting(org_key, data_directory / "match_scouting.csv")
+    download_scout_radioz_pit_scouting(org_key, data_directory / "pit_scouting.csv")
 
 
 if __name__ == "__main__":
