@@ -5,9 +5,21 @@ import plotly.graph_objects as go
 import numpy as np
 import os
 
+
 # read in data
-this_dir = os.path.dirname(os.path.realpath(__file__))
-df = pd.read_csv(this_dir + "/frc_mock_data_updated.csv")
+USE_LOCAL_VERSION = False
+if USE_LOCAL_VERSION:
+    this_dir = os.path.dirname(os.path.realpath(__file__))
+    data_file = this_dir + this_dir + "/frc_mock_data_updated.csv"
+    print(f"Loading local data from: {data_file}")
+    df = pd.read_csv(data_file)
+else:
+    branch_name = "main"
+    url = f"https://raw.githubusercontent.com/pjreiniger/gos_scouting_report/refs/heads/{branch_name}/frc_mock_data_updated.csv"
+    print(f"Loading remote data from {url}")
+
+    from pyodide.http import open_url
+    df = pd.read_csv(open_url(url))
 
 # add new columns
 df["totalTeleopCoral"] = df["teleopCoralL1"] + df["teleopCoralL2"] + df["teleopCoralL3"] + df["teleopCoralL4"]
