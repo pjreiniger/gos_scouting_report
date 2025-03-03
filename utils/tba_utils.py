@@ -11,13 +11,17 @@ def __get_api_key():
     app_dir = Path(__file__).parent
     api_key_file = os.path.join(app_dir.parent, ".tba_key")
 
-    if not os.path.exists(api_key_file):
+    # Prefer file over envvar
+    if os.path.exists(api_key_file):
+        with open(api_key_file, "r") as f:
+            api_key = f.read()
+    # If the file doesn't exist, try to look it up in environment variables
+    elif "TBA_API_KEY" in os.environ:
+        api_key = os.environ["TBA_API_KEY"]
+    else:
         raise FileNotFoundError(
-            f"Could not find TBA API key at {api_key_file}. Please create this file and paste your API key. If you do not have an API key, create one at https://www.thebluealliance.com/account/"
+            f"Could not find TBA API key at {api_key_file}, nor was it found in your environment variables. Please create this file and paste your API key. If you do not have an API key, create one at https://www.thebluealliance.com/account/"
         )
-
-    with open(api_key_file, "r") as f:
-        api_key = f.read()
 
     return api_key
 

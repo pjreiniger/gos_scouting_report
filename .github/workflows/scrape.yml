@@ -11,6 +11,8 @@ jobs:
               run: pip install -r requirements.txt
             - name: Scrape Scouting Data
               run: python download_external_data.py
+              env:
+                TBA_API_KEY: ${{ secrets.TBA_API_KEY }}
             - name: Commit changes
               if: ${{ success() }}
               uses: EndBug/add-and-commit@v9
