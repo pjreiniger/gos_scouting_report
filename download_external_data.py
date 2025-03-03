@@ -17,7 +17,7 @@ def download_external_data(event):
     script_directory = pathlib.Path(__file__).resolve().parent
 
     data_directory = script_directory / "data" / event
-    data_directory.mkdir(parents=True)
+    data_directory.mkdir(parents=True, exist_ok=True)
 
     download_statbotics_matches(event, data_directory / "statbotics_matches.json")
     download_statbotics_event_teams(event, data_directory / "statbotics_teams.json")
