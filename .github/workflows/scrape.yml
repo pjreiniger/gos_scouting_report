@@ -10,7 +10,7 @@ jobs:
             - name: Install Dependencies
               run: pip install -r requirements.txt
             - name: Scrape Scouting Data
-              uses: download_external_data.py
+              run: download_external_data.py
             - name: Commit changes
               if: ${{ success() }}
               uses: EndBug/add-and-commit@v9
