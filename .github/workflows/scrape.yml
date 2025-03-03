@@ -8,7 +8,9 @@ jobs:
             - uses: actions/checkout@v3
             - uses: actions/setup-python@v5
             - name: Install Dependencies
-              run: pip install -r requirements.txt
+              run: |
+                pip install -r requirements.txt
+                pip install -r requirements-dev.txt
             - name: Scrape Scouting Data
               run: python download_external_data.py
               env:

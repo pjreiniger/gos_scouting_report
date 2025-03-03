@@ -2,4 +2,3 @@ shiny
 pandas
 plotly
 numpy
-statbotics==3.0.0

@@ -39,11 +39,9 @@ jobs:
           python-version: '3.10'
 
       - name: Pip Install
-        run: pip3 install -r requirements.txt
-
-      # Shiny export gets wierd if shinylive is in requirements
-      - name: Pip Install shinylive
-        run: pip3 install shinylive
+        run: |
+          pip install -r requirements.txt
+          pip install -r requirements-live.txt
 
       - name: Export Shiny App
         run: shinylive export . site
