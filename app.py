@@ -3,19 +3,20 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
-import os
+import pathlib
 
 
 # read in data
 USE_LOCAL_VERSION = False
+EVENT_KEY = "2025txwac"
 if USE_LOCAL_VERSION:
-    this_dir = os.path.dirname(os.path.realpath(__file__))
-    data_file = this_dir + this_dir + "/frc_mock_data_updated.csv"
+    script_directory = pathlib.Path(__file__).resolve().parent
+    data_file = script_directory / f"data/{EVENT_KEY}/match_scouting.csv"
     print(f"Loading local data from: {data_file}")
     df = pd.read_csv(data_file)
 else:
     branch_name = "main"
-    url = f"https://raw.githubusercontent.com/pjreiniger/gos_scouting_report/refs/heads/{branch_name}/frc_mock_data_updated.csv"
+    url = f"https://raw.githubusercontent.com/pjreiniger/gos_scouting_report/refs/heads/{branch_name}/data/{EVENT_KEY}/match_scouting.csv"
     print(f"Loading remote data from {url}")
 
     from pyodide.http import open_url
@@ -46,8 +47,9 @@ df["totalPointsScored"] = df["totalTeleopPoints"] + df["totalAutoPoints"] + df["
 df["team_key"] = df["team_key"].str[3:]
 
 # upcoming alliance lineup
-red_teams = ["2172", "291", "3504"]
-blue_teams = ["3260", "117", "4467"]
+
+red_teams = ["8408", "2881", "2689"]
+blue_teams = ["8507", "2950", "148"]
 all_teams = red_teams + blue_teams
 
 # filter df by team_key
