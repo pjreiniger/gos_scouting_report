@@ -34,39 +34,37 @@ df["totalPointsScored"] = df["totalTeleopPoints"] + df["totalAutoPoints"] + df["
 df["team_key"] = df["team_key"].str[3:]
 
 # upcoming alliance lineup
-red_teams = ["2172", "291", "3504"]
-blue_teams = ["3260", "117", "4467"]
-all_teams = red_teams + blue_teams
+def get_match_data():
+    red_teams = ["2172", "291", "3504"]
+    blue_teams = ["3260", "117", "4467"]
 
-# filter df by team_key
-new_df = df.loc[df["team_key"].isin(all_teams)]
-new_df["colorGroup"] = new_df["team_key"].apply(lambda x: "Red" if x in red_teams else "Blue")
+    all_teams = red_teams + blue_teams
 
-# averages df
-averages_by_team = new_df.groupby("team_key").mean(numeric_only=True).reset_index()
-averages_by_team_all = df.groupby("team_key").mean(numeric_only=True).reset_index()
+    # filter df by team_key
+    new_df = df.loc[df["team_key"].isin(all_teams)]
+    new_df["colorGroup"] = new_df["team_key"].apply(lambda x: "Red" if x in red_teams else "Blue")
 
-teams = averages_by_team["team_key"]
+    # averages df
+    averages_by_team = new_df.groupby("team_key").mean(numeric_only=True).reset_index()
+    averages_by_team_all = df.groupby("team_key").mean(numeric_only=True).reset_index()
 
-# endgame df
-endgame_df = new_df.groupby('team_key')['bargeStatus'].value_counts().unstack(fill_value=0).reset_index()
+    teams = averages_by_team["team_key"]
 
-# color coding
-ticktext = [
-    f"<span style='color:{'red' if team in red_teams else 'blue'}'>{team}</span>"
-    for team in all_teams
-]
+  
 
-new_df = new_df.sort_values(["colorGroup", "team_key"], ascending=[True, True])
+    new_df = new_df.sort_values(["colorGroup", "team_key"], ascending=[True, True])
 
-color_map = {str(team): "#FF5733" for team in red_teams}  # Red teams
-color_map.update({str(team): "#1F77B4" for team in blue_teams})  # Blue teams
+    color_map = {str(team): "#FF5733" for team in red_teams}  # Red teams
+    color_map.update({str(team): "#1F77B4" for team in blue_teams})  # Blue teams
+
+    return new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all
 
 def color_picker(team_num):
-            if team_num in red_teams:
-                return "red"
-            else:
-                return "blue"
+    new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+    if team_num in red_teams:
+        return "red"
+    else:
+        return "blue"
 
 # Define the UI
 app_ui = ui.page_navbar(
@@ -126,6 +124,7 @@ def server(input, output, session):
     @output
     @render.ui
     def total_points_boxplot():
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
         fig = px.box(new_df, 
                     x="team_key", 
                     y="totalPointsScored", 
@@ -150,8 +149,10 @@ def server(input, output, session):
     @output
     @render.ui
     def coral_algae_teleop_scatter():
-
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
         def color_picker(team_num):
+            new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+
             if team_num in red_teams:
                 return "red"
             else:
@@ -174,6 +175,8 @@ def server(input, output, session):
     @output
     @render.ui
     def teleop_auto_points_scatter():
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+        teams = averages_by_team["team_key"]
         x = averages_by_team["totalTeleopPoints"]
         y = averages_by_team["totalAutoPoints"]
 
@@ -192,6 +195,8 @@ def server(input, output, session):
     @output
     @render.ui
     def net_processor_teleop():
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+
         # Step 1: Convert team_keys to string
         averages_by_team["team_key"] = averages_by_team["team_key"].astype(str)
 
@@ -249,6 +254,8 @@ def server(input, output, session):
     @output
     @render.ui
     def coral_algae_auto_scatter():
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+
         x = averages_by_team["totalAutoCoral"]
         y = averages_by_team["algaeAuto"]
         teams = averages_by_team["team_key"]
@@ -262,6 +269,8 @@ def server(input, output, session):
     @output
     @render.ui
     def coral_level_distribution_teleop_bar():
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+
         # coral level distribution -- stacked bar graph
         averages_by_team["team_key"] = averages_by_team["team_key"].astype(str)
         x = averages_by_team["team_key"]
@@ -299,6 +308,8 @@ def server(input, output, session):
             name="Coral L4",
             marker=dict(color="#FFE493", line=dict(color="white", width=1))
         ))
+        
+        ticktext = [f'<span style="color:{color_map[team]};">{team}</span>' for team in x]
 
         fig.update_layout(
             barmode="stack",  # Stack the bars
@@ -319,6 +330,8 @@ def server(input, output, session):
     @output
     @render.ui
     def coral_level_distribution_auto_bar():
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+
         # coral level distribution -- stacked bar graph
         averages_by_team["team_key"] = averages_by_team["team_key"].astype(str)
         x = averages_by_team["team_key"]
@@ -357,6 +370,10 @@ def server(input, output, session):
             marker=dict(color="#FFE493", line=dict(color="white", width=1))
         ))
 
+        ticktext = [
+        f"<span style='color:{'red' if team in red_teams else 'blue'}'>{team}</span>"
+        for team in all_teams
+        ]
         fig.update_layout(
             barmode="stack",  # Stack the bars
             xaxis=dict(
@@ -377,6 +394,8 @@ def server(input, output, session):
     @output
     @render.ui
     def coral_point_distribution_teleop_bar():
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+
         # coral level distribution -- stacked bar graph
         averages_by_team["team_key"] = averages_by_team["team_key"].astype(str)
         x = averages_by_team["team_key"]
@@ -414,7 +433,10 @@ def server(input, output, session):
             name="Coral L4",
             marker=dict(color="#FFE493", line=dict(color="white", width=1))
         ))
-
+        ticktext = [
+        f"<span style='color:{'red' if team in red_teams else 'blue'}'>{team}</span>"
+        for team in all_teams
+        ]
         fig.update_layout(
             barmode="stack",  # Stack the bars
             xaxis=dict(
@@ -430,9 +452,13 @@ def server(input, output, session):
             template="plotly_white"
         )
         return ui.HTML(fig.to_html(full_html=False)) 
+      
     @output
     @render.ui
     def endgame_bar():
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+        endgame_df = new_df.groupby('team_key')['bargeStatus'].value_counts().unstack(fill_value=0).reset_index()
+
         # Convert "team_key" to string if not already done
         endgame_df["team_key"] = endgame_df["team_key"].astype(str)
         x = endgame_df["team_key"]
@@ -469,6 +495,10 @@ def server(input, output, session):
             marker=dict(color="#FFF2AF", line=dict(color="white", width=1))
         ))
 
+        ticktext = [
+        f"<span style='color:{'red' if team in red_teams else 'blue'}'>{team}</span>"
+        for team in all_teams
+        ]
         # Update layout for stacking and aesthetics
         fig.update_layout(
             barmode="stack",  # Stack the bars
@@ -489,6 +519,8 @@ def server(input, output, session):
     @output
     @render.data_frame
     def key_stats_dt():
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+
         return averages_by_team_all  
     
 
