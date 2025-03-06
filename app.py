@@ -1,9 +1,13 @@
-from shiny import App, ui, render
+from shiny import App, ui, render, reactive
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
 import pathlib
+import json
+
+from utils import statbotics_utils
+from utils.tba_utils import load_event_matches
 
 
 # read in data
@@ -12,7 +16,13 @@ EVENT_KEY = "2025txwac"
 script_directory = pathlib.Path(__file__).resolve().parent
 data_file = f"data/{EVENT_KEY}/match_scouting.csv"
 print(f"Loading local data from: {data_file}")
+
 df = pd.read_csv(data_file)
+matches_df = load_event_matches(f"data/{EVENT_KEY}/tba_matches.json")
+with open(f"data/{EVENT_KEY}/statbotics_matches.json", 'r') as f:
+    statbotics_json = json.load(f)
+statbotics_df = pd.DataFrame(statbotics_json)
+print(matches_df.keys())
 
 # add new columns
 df["totalTeleopCoral"] = df["teleopCoralL1"] + df["teleopCoralL2"] + df["teleopCoralL3"] + df["teleopCoralL4"]
@@ -39,31 +49,6 @@ df["totalPointsScored"] = df["totalTeleopPoints"] + df["totalAutoPoints"] + df["
 df["team_key"] = df["team_key"].str[3:]
 
 # upcoming alliance lineup
-def get_match_data():
-    red_teams = ["8408", "2881", "2689"]
-    blue_teams = ["8507", "2950", "148"]
-
-    all_teams = red_teams + blue_teams
-
-    # filter df by team_key
-    new_df = df.loc[df["team_key"].isin(all_teams)]
-    new_df["colorGroup"] = new_df["team_key"].apply(lambda x: "Red" if x in red_teams else "Blue")
-
-    # averages df
-    averages_by_team = new_df.groupby("team_key").mean(numeric_only=True).reset_index()
-    averages_by_team_all = df.groupby("team_key").mean(numeric_only=True).reset_index()
-
-    teams = averages_by_team["team_key"]
-
-  
-
-    new_df = new_df.sort_values(["colorGroup", "team_key"], ascending=[True, True])
-
-    color_map = {str(team): "#FF5733" for team in red_teams}  # Red teams
-    color_map.update({str(team): "#1F77B4" for team in blue_teams})  # Blue teams
-
-    return new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all
-
 def color_picker(team_num):
     new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
     if team_num in red_teams:
@@ -74,13 +59,18 @@ def color_picker(team_num):
 # Define the UI
 app_ui = ui.page_navbar(
     ui.nav_panel(
+        "Filter Matches",
+        ui.input_switch("our_matches_switch", "Filter Our Matches", False),
+        ui.output_ui("match_list_combobox"),
+    ),
+    ui.nav_panel(
         "General Data",
         ui.card(
             ui.output_ui("teleop_auto_points_scatter")
         ),
         ui.card(
             ui.output_ui("total_points_boxplot")
-        )
+        ),
     ),
     ui.nav_panel(
         "Auto Data",
@@ -124,8 +114,38 @@ app_ui = ui.page_navbar(
     title="GoS REEFSCAPE Data Science Report",
 )
 
+
+@reactive.calc
+def get_match_data():
+    match_num = 6
+    red_teams = [matches_df["red1"][match_num][3:], matches_df["red2"][match_num][3:], matches_df["red3"][match_num][3:]]
+    blue_teams = [matches_df["blue1"][match_num][3:], matches_df["blue2"][match_num][3:], matches_df["blue3"][match_num][3:]]
+
+    all_teams = red_teams + blue_teams
+
+    # filter df by team_key
+    new_df = df.loc[df["team_key"].isin(all_teams)]
+    new_df["colorGroup"] = new_df["team_key"].apply(lambda x: "Red" if x in red_teams else "Blue")
+
+    # averages df
+    averages_by_team = new_df.groupby("team_key").mean(numeric_only=True).reset_index()
+    averages_by_team_all = df.groupby("team_key").mean(numeric_only=True).reset_index()
+
+    teams = averages_by_team["team_key"]
+
+
+
+    new_df = new_df.sort_values(["colorGroup", "team_key"], ascending=[True, True])
+
+    color_map = {str(team): "#FF5733" for team in red_teams}  # Red teams
+    color_map.update({str(team): "#1F77B4" for team in blue_teams})  # Blue teams
+
+    return new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all
+
 # Define the server logic
 def server(input, output, session):
+    
+
     @output
     @render.ui
     def total_points_boxplot():
@@ -528,5 +548,25 @@ def server(input, output, session):
 
         return averages_by_team_all  
     
+    @render.ui
+    def match_list_combobox():
+        if input.our_matches_switch():
+            team_matches = statbotics_utils.get_matches_for_team(
+                statbotics_df, 148
+            )
+            match_numbers = list(team_matches["match_number"])
+        else:
+            match_numbers = matches_df["match_number"]
+
+        return (
+            ui.input_select(
+                "match_select",
+                "Match",
+                {
+                    str(match_number): str(match_number)
+                    for match_number in match_numbers
+                },
+            ),
+        )
 
 app = App(app_ui, server)
