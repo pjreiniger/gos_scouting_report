@@ -3,7 +3,6 @@ import json
 from pathlib import Path
 
 import pandas as pd
-import requests
 from typing import Dict, Any
 
 
@@ -29,6 +28,7 @@ def __get_api_key():
 def __make_request(url):
     headers = {"X-TBA-Auth-Key": __get_api_key()}
 
+    import requests
     response = requests.get(url, headers=headers)
 
     return response.json()

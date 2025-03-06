@@ -6,23 +6,35 @@ import numpy as np
 import pathlib
 import json
 
-from utils import statbotics_utils
-from utils.tba_utils import load_event_matches
-
+from utils import statbotics_utils, tba_utils
 
 # read in data
-USE_LOCAL_VERSION = True
+USE_LOCAL_VERSION = False
 EVENT_KEY = "2025txwac"
-script_directory = pathlib.Path(__file__).resolve().parent
-data_file = f"data/{EVENT_KEY}/match_scouting.csv"
-print(f"Loading local data from: {data_file}")
 
-df = pd.read_csv(data_file)
-matches_df = load_event_matches(f"data/{EVENT_KEY}/tba_matches.json")
-with open(f"data/{EVENT_KEY}/statbotics_matches.json", 'r') as f:
-    statbotics_json = json.load(f)
-statbotics_df = pd.DataFrame(statbotics_json)
-print(matches_df.keys())
+if USE_LOCAL_VERSION:
+    script_directory = pathlib.Path(__file__).resolve().parent
+    base_data_directory = script_directory / ".." / f"data/{EVENT_KEY}"
+    print(f"Loading local data from: {base_data_directory}")
+
+    df = pd.read_csv(base_data_directory / "match_scouting.csv")
+    matches_df = tba_utils.load_event_matches(base_data_directory / "tba_matches.json")
+    statbotics_df = statbotics_utils.load_statbotics_matches(base_data_directory / "statbotics_matches.json")
+else:
+    branch_name = "main"
+    base_url = f"https://raw.githubusercontent.com/GirlsOfSteelRobotics/gos_scouting_report/refs/heads/{branch_name}/data/{EVENT_KEY}"
+    print(f"Loading remote data from {base_url}")
+
+    from pyodide.http import open_url
+
+    scouted_csv = open_url(base_url + "/match_scouting.csv")
+    tba_matches_json = json.load(open_url(base_url + "/tba_matches.json"))
+    statbotics_matches_json = json.load(open_url(base_url + "/statbotics_matches.json"))
+    
+    df = pd.read_csv(scouted_csv)
+    matches_df = tba_utils.event_matches_json_to_dataframe(tba_matches_json)
+    statbotics_df = statbotics_utils.statbotics_matches_json_to_dataframe(statbotics_matches_json)
+
 
 # add new columns
 df["totalTeleopCoral"] = df["teleopCoralL1"] + df["teleopCoralL2"] + df["teleopCoralL3"] + df["teleopCoralL4"]
@@ -48,21 +60,17 @@ df["totalPointsScored"] = df["totalTeleopPoints"] + df["totalAutoPoints"] + df["
 # update team name
 df["team_key"] = df["team_key"].str[3:]
 
-# upcoming alliance lineup
-def color_picker(team_num):
-    new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
-    if team_num in red_teams:
-        return "red"
-    else:
-        return "blue"
-
 # Define the UI
 app_ui = ui.page_navbar(
-    ui.nav_panel(
+ui.nav_panel(
+    "Match Preview",
+ui.page_sidebar(
+    ui.sidebar(
         "Filter Matches",
         ui.input_switch("our_matches_switch", "Filter Our Matches", False),
         ui.output_ui("match_list_combobox"),
     ),
+    ui.page_navbar(
     ui.nav_panel(
         "General Data",
         ui.card(
@@ -105,6 +113,9 @@ app_ui = ui.page_navbar(
             ui.output_ui("endgame_bar")
         )
     ),
+    ),
+),
+),
     ui.nav_panel(
         "Alliance Selection",
         ui.card(
@@ -114,37 +125,39 @@ app_ui = ui.page_navbar(
     title="GoS REEFSCAPE Data Science Report",
 )
 
-
-@reactive.calc
-def get_match_data():
-    match_num = 6
-    red_teams = [matches_df["red1"][match_num][3:], matches_df["red2"][match_num][3:], matches_df["red3"][match_num][3:]]
-    blue_teams = [matches_df["blue1"][match_num][3:], matches_df["blue2"][match_num][3:], matches_df["blue3"][match_num][3:]]
-
-    all_teams = red_teams + blue_teams
-
-    # filter df by team_key
-    new_df = df.loc[df["team_key"].isin(all_teams)]
-    new_df["colorGroup"] = new_df["team_key"].apply(lambda x: "Red" if x in red_teams else "Blue")
-
-    # averages df
-    averages_by_team = new_df.groupby("team_key").mean(numeric_only=True).reset_index()
-    averages_by_team_all = df.groupby("team_key").mean(numeric_only=True).reset_index()
-
-    teams = averages_by_team["team_key"]
-
-
-
-    new_df = new_df.sort_values(["colorGroup", "team_key"], ascending=[True, True])
-
-    color_map = {str(team): "#FF5733" for team in red_teams}  # Red teams
-    color_map.update({str(team): "#1F77B4" for team in blue_teams})  # Blue teams
-
-    return new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all
-
 # Define the server logic
 def server(input, output, session):
-    
+    # upcoming alliance lineup
+    def color_picker(team_num):
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+        if team_num in red_teams:
+            return "red"
+        else:
+            return "blue"
+
+    @reactive.calc
+    def get_match_data():
+        match_num = int(input.match_select())
+        match_data = matches_df[matches_df["match_number"] == match_num].reset_index()
+        red_teams = [match_data["red1"][0][3:], match_data["red2"][0][3:], match_data["red3"][0][3:]]
+        blue_teams = [match_data["blue1"][0][3:], match_data["blue2"][0][3:], match_data["blue3"][0][3:]]
+
+        all_teams = red_teams + blue_teams
+
+        # filter df by team_key
+        new_df = df.loc[df["team_key"].isin(all_teams)]
+        new_df["colorGroup"] = new_df["team_key"].apply(lambda x: "Red" if x in red_teams else "Blue")
+
+        # averages df
+        averages_by_team = new_df.groupby("team_key").mean(numeric_only=True).reset_index()
+        averages_by_team_all = df.groupby("team_key").mean(numeric_only=True).reset_index()
+
+        new_df = new_df.sort_values(["colorGroup", "team_key"], ascending=[True, True])
+
+        color_map = {str(team): "#FF5733" for team in red_teams}  # Red teams
+        color_map.update({str(team): "#1F77B4" for team in blue_teams})  # Blue teams
+
+        return new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all
 
     @output
     @render.ui
@@ -175,13 +188,6 @@ def server(input, output, session):
     @render.ui
     def coral_algae_teleop_scatter():
         new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
-        def color_picker(team_num):
-            new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
-
-            if team_num in red_teams:
-                return "red"
-            else:
-                return "blue"
 
         x = averages_by_team["totalTeleopCoral"]
         y = averages_by_team["algaeTeleop"]
