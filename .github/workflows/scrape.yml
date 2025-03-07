@@ -21,4 +21,4 @@ jobs:
               with:
                   message: "Scrape Scouting Data"
                   default_author: github_actor
-                  new_branch: test_branch
+                  # new_branch: test_branch
