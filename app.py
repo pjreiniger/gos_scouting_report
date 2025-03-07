@@ -521,7 +521,6 @@ def server(input, output, session):
             endgame_df['Shallow Cage'] = 0
         if 'Deep Cage' not in endgame_df.columns:
             endgame_df['Deep Cage'] = 0
-        print(endgame_df)
 
         # Convert "team_key" to string if not already done
         endgame_df["team_key"] = endgame_df["team_key"].astype(str)
