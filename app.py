@@ -36,6 +36,7 @@ else:
     matches_df = tba_utils.event_matches_json_to_dataframe(tba_matches_json)
     statbotics_df = statbotics_utils.statbotics_matches_json_to_dataframe(statbotics_matches_json)
 
+print(matches_df.columns.tolist())
 
 # add new columns
 df["totalTeleopCoral"] = df["teleopCoralL1"] + df["teleopCoralL2"] + df["teleopCoralL3"] + df["teleopCoralL4"]
@@ -561,10 +562,11 @@ def server(input, output, session):
     @render.ui
     def match_list_combobox():
         if input.our_matches_switch():
-            team_matches = statbotics_utils.get_matches_for_team(
-                statbotics_df, OUR_TEAM_NUMBER
-            )
-            match_numbers = list(team_matches["match_number"])
+        # Fix: Use .apply() to check if OUR_TEAM_NUMBER is in the list of team keys
+            matches_df_copy = matches_df[
+                matches_df["alliances.blue.team_keys"].apply(lambda teams: any(str(OUR_TEAM_NUMBER) in team for team in teams)) |
+                matches_df["alliances.red.team_keys"].apply(lambda teams: any(str(OUR_TEAM_NUMBER) in team for team in teams))]
+            match_numbers = matches_df_copy["match_number"]
         else:
             match_numbers = matches_df["match_number"]
 
