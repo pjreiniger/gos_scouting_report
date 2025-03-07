@@ -14133,7 +14133,7 @@
         "event_key": "2025nysu",
         "key": "2025nysu_qm52",
         "match_number": 52,
-        "post_result_time": null,
+        "post_result_time": 1741387968,
         "predicted_time": 1741387740,
         "score_breakdown": {
             "blue": {
@@ -14397,7 +14397,12 @@
         },
         "set_number": 1,
         "time": 1741387140,
-        "videos": [],
+        "videos": [
+            {
+                "key": "6EtcGyskpx4",
+                "type": "youtube"
+            }
+        ],
         "winning_alliance": "red"
     },
     {
