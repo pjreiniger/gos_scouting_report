@@ -21333,7 +21333,7 @@
         "event_key": "2025nysu",
         "key": "2025nysu_qm74",
         "match_number": 74,
-        "post_result_time": null,
+        "post_result_time": 1741452694,
         "predicted_time": 1741452542,
         "score_breakdown": {
             "blue": {
@@ -21597,7 +21597,12 @@
         },
         "set_number": 1,
         "time": 1741452510,
-        "videos": [],
+        "videos": [
+            {
+                "key": "r-lbqy3zt-g",
+                "type": "youtube"
+            }
+        ],
         "winning_alliance": "red"
     },
     {
@@ -22199,5 +22204,149 @@
             }
         ],
         "winning_alliance": "blue"
+    },
+    {
+        "actual_time": null,
+        "alliances": {
+            "blue": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc2601",
+                    "frc6593",
+                    "frc9642"
+                ]
+            },
+            "red": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc1796",
+                    "frc694",
+                    "frc5298"
+                ]
+            }
+        },
+        "comp_level": "sf",
+        "event_key": "2025nysu",
+        "key": "2025nysu_sf1m1",
+        "match_number": 1,
+        "post_result_time": null,
+        "predicted_time": 1741455853,
+        "score_breakdown": null,
+        "set_number": 1,
+        "time": 1741458600,
+        "videos": [],
+        "winning_alliance": ""
+    },
+    {
+        "actual_time": null,
+        "alliances": {
+            "blue": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc9016",
+                    "frc1493",
+                    "frc1880"
+                ]
+            },
+            "red": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc2872",
+                    "frc2053",
+                    "frc379"
+                ]
+            }
+        },
+        "comp_level": "sf",
+        "event_key": "2025nysu",
+        "key": "2025nysu_sf2m1",
+        "match_number": 1,
+        "post_result_time": null,
+        "predicted_time": 1741456339,
+        "score_breakdown": null,
+        "set_number": 2,
+        "time": 1741459140,
+        "videos": [],
+        "winning_alliance": ""
+    },
+    {
+        "actual_time": null,
+        "alliances": {
+            "blue": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc3419",
+                    "frc287",
+                    "frc4467"
+                ]
+            },
+            "red": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc353",
+                    "frc5736",
+                    "frc5016"
+                ]
+            }
+        },
+        "comp_level": "sf",
+        "event_key": "2025nysu",
+        "key": "2025nysu_sf3m1",
+        "match_number": 1,
+        "post_result_time": null,
+        "predicted_time": 1741456825,
+        "score_breakdown": null,
+        "set_number": 3,
+        "time": 1741459680,
+        "videos": [],
+        "winning_alliance": ""
+    },
+    {
+        "actual_time": null,
+        "alliances": {
+            "blue": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc6911",
+                    "frc6423",
+                    "frc1155"
+                ]
+            },
+            "red": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc4122",
+                    "frc9295",
+                    "frc1884"
+                ]
+            }
+        },
+        "comp_level": "sf",
+        "event_key": "2025nysu",
+        "key": "2025nysu_sf4m1",
+        "match_number": 1,
+        "post_result_time": null,
+        "predicted_time": 1741457311,
+        "score_breakdown": null,
+        "set_number": 4,
+        "time": 1741460220,
+        "videos": [],
+        "winning_alliance": ""
     }
 ]
