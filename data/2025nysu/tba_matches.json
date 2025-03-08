@@ -22506,26 +22506,26 @@
         "winning_alliance": "red"
     },
     {
-        "actual_time": null,
+        "actual_time": 1741459445,
         "alliances": {
             "blue": {
                 "dq_team_keys": [],
-                "score": -1,
+                "score": 121,
                 "surrogate_team_keys": [],
                 "team_keys": [
+                    "frc1880",
                     "frc9016",
-                    "frc1493",
-                    "frc1880"
+                    "frc1493"
                 ]
             },
             "red": {
                 "dq_team_keys": [],
-                "score": -1,
+                "score": 122,
                 "surrogate_team_keys": [],
                 "team_keys": [
+                    "frc379",
                     "frc2872",
-                    "frc2053",
-                    "frc379"
+                    "frc2053"
                 ]
             }
         },
@@ -22539,7 +22539,7 @@
         "set_number": 2,
         "time": 1741459140,
         "videos": [],
-        "winning_alliance": ""
+        "winning_alliance": "red"
     },
     {
         "actual_time": null,
@@ -22570,7 +22570,7 @@
         "key": "2025nysu_sf3m1",
         "match_number": 1,
         "post_result_time": null,
-        "predicted_time": 1741459938,
+        "predicted_time": 1741459950,
         "score_breakdown": null,
         "set_number": 3,
         "time": 1741459680,
@@ -22606,10 +22606,82 @@
         "key": "2025nysu_sf4m1",
         "match_number": 1,
         "post_result_time": null,
-        "predicted_time": 1741460424,
+        "predicted_time": 1741460436,
         "score_breakdown": null,
         "set_number": 4,
         "time": 1741460220,
+        "videos": [],
+        "winning_alliance": ""
+    },
+    {
+        "actual_time": null,
+        "alliances": {
+            "blue": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc1880",
+                    "frc9016",
+                    "frc1493"
+                ]
+            },
+            "red": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc6593",
+                    "frc9642",
+                    "frc2601"
+                ]
+            }
+        },
+        "comp_level": "sf",
+        "event_key": "2025nysu",
+        "key": "2025nysu_sf5m1",
+        "match_number": 1,
+        "post_result_time": null,
+        "predicted_time": null,
+        "score_breakdown": null,
+        "set_number": 5,
+        "time": 1741460760,
+        "videos": [],
+        "winning_alliance": ""
+    },
+    {
+        "actual_time": null,
+        "alliances": {
+            "blue": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc379",
+                    "frc2872",
+                    "frc2053"
+                ]
+            },
+            "red": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc694",
+                    "frc5298",
+                    "frc1796"
+                ]
+            }
+        },
+        "comp_level": "sf",
+        "event_key": "2025nysu",
+        "key": "2025nysu_sf7m1",
+        "match_number": 1,
+        "post_result_time": null,
+        "predicted_time": null,
+        "score_breakdown": null,
+        "set_number": 7,
+        "time": 1741461840,
         "videos": [],
         "winning_alliance": ""
     }
