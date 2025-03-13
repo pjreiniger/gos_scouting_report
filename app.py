@@ -92,7 +92,8 @@ ui.page_sidebar(
         ),
         ui.card(
             ui.output_ui("coral_point_distribution_auto_bar")
-        )        
+        ) 
+             
     ),
     ui.nav_panel(
         "Teleop Data",
@@ -193,12 +194,12 @@ def server(input, output, session):
     def coral_algae_teleop_scatter():
         new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
 
-        x = averages_by_team["totalTeleopCoral"]
-        y = averages_by_team["algaeTeleop"]
+        x = averages_by_team["algaeTeleop"]
+        y = averages_by_team["totalTeleopCoral"]
         teams = averages_by_team["team_key"]
 
-        fig = px.scatter(x=x, y=y, text=teams, labels={'x': "Avg Coral Scored", 'y': "Avg Algae Scored in Net"},
-                        title="Coral vs Algae TELEOP")
+        fig = px.scatter(x=x, y=y, text=teams, labels={'x': "Avg Algae Scored", 'y': "Avg Coral Scored in Net"},
+                        title="Algae vs Coral TELEOP")
 
         colors = [color_picker(team) for team in teams]
         fig.update_traces(marker=dict(color=colors,
@@ -291,11 +292,11 @@ def server(input, output, session):
     def coral_algae_auto_scatter():
         new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
 
-        x = averages_by_team["totalAutoCoral"]
-        y = averages_by_team["algaeAuto"]
+        x = averages_by_team["algaeAuto"]
+        y = averages_by_team["totalAutoCoral"]
         teams = averages_by_team["team_key"]
 
-        fig = px.scatter(x=x, y=y, text=teams, labels={'x': "Avg Coral Scored", 'y': "Avg Algae Scored in Net"}, title="Coral vs Algae AUTO")
+        fig = px.scatter(x=x, y=y, text=teams, labels={'x': "Avg Algae Scored", 'y': "Avg Coral Scored in Net"}, title="Coral vs Algae AUTO")
 
         colors = [color_picker(team) for team in teams]  # Apply color_picker correctly
         fig.update_traces(marker=dict(color=colors, symbol='circle', size=10), textposition="middle left") 
@@ -483,6 +484,67 @@ def server(input, output, session):
             ),
             yaxis_title="Avg Coral in L1, L2, L3, L4",
             title="Coral Point Distribution by Level Teleop",
+            legend_title="Coral Levels",
+            template="plotly_white"
+        )
+        return ui.HTML(fig.to_html(full_html=False))
+
+    @output
+    @render.ui
+    def coral_point_distribution_auto_bar():
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+
+        averages_by_team["team_key"] = averages_by_team["team_key"].astype(str)
+        x = averages_by_team["team_key"]
+        y1 = averages_by_team["autoCoralL1"]*3
+        y2 = averages_by_team["autoCoralL2"]*4
+        y3 = averages_by_team["autoCoralL3"]*6
+        y4 = averages_by_team["autoCoralL4"]*7
+
+        fig = go.Figure()
+
+        fig.add_trace(go.Bar(
+            x=x,
+            y=y1,
+            name="Coral L1",
+            marker=dict(color="#9BE3DF", line=dict(color="white", width=1))
+        ))
+
+        fig.add_trace(go.Bar(
+            x=x,
+            y=y2,
+            name="Coral L2",
+            marker=dict(color="#F7898A", line=dict(color="white", width=1))
+        ))
+
+        fig.add_trace(go.Bar(
+            x=x,
+            y=y3,
+            name="Coral L3",
+            marker=dict(color="#FACE9F", line=dict(color="white", width=1))
+        ))
+
+        fig.add_trace(go.Bar(
+            x=x,
+            y=y4,
+            name="Coral L4",
+            marker=dict(color="#FFE493", line=dict(color="white", width=1))
+        ))
+        ticktext = [
+        f"<span style='color:{'red' if team in red_teams else 'blue'}'>{team}</span>"
+        for team in all_teams
+        ]
+        fig.update_layout(
+            barmode="stack",  # Stack the bars
+            xaxis=dict(
+                title="Team",
+                tickmode="array",
+                tickvals=all_teams,
+                ticktext= ticktext,
+                tickfont=dict(size=14)  # Adjust font size if needed
+            ),
+            yaxis_title="Avg Coral Points in L1, L2, L3, L4",
+            title="Coral Point Distribution by Level Auto",
             legend_title="Coral Levels",
             template="plotly_white"
         )
