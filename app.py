@@ -61,8 +61,6 @@ df["totalPointsScored"] = df["totalTeleopPoints"] + df["totalAutoPoints"] + df["
 # update team name
 df["team_key"] = df["team_key"].str[3:]
 
-
-
 def create_mock_data_for_missing_teams(teams_with_no_data):
     data = collections.defaultdict(list)
 
@@ -73,6 +71,8 @@ def create_mock_data_for_missing_teams(teams_with_no_data):
         data["bargeStatus"][-1] = "Not Parked"
     return pd.DataFrame(data)
 
+df_unique_teams = df.drop_duplicates(subset=['team_key'], keep='first')
+print(df_unique_teams.keys())
 # Define the UI
 app_ui = ui.page_navbar(
 ui.nav_panel(
@@ -135,6 +135,26 @@ ui.page_sidebar(
         ui.card(
             ui.output_data_frame("key_stats_dt")
         )
+    ),
+
+    ui.nav_panel(
+        "Team Summary",
+        ui.page_sidebar(
+            ui.sidebar(
+            ui.output_ui("team_list_combobox"),
+            ),
+            ui.card(
+            ui.output_ui("team_piece_summary_teleop")
+            ),
+            ui.card(
+            ui.output_ui("team_piece_summary_auto")
+            ),
+            ui.card(
+            ui.output_data_frame("key_stats_by_team_dt")
+            )
+            
+        )    
+    
     ),
     title="GoS REEFSCAPE Data Science Report",
 )
@@ -669,5 +689,60 @@ def server(input, output, session):
                 },
             ),
         )
+    
+    @output
+    @render.ui
+    def team_list_combobox():
+        team_numbers = df_unique_teams["team_key"].astype(str).tolist()  # Ensure values are strings
+
+        return ui.input_select(
+            "team_select",  # Assign a unique ID to retrieve the selected value
+            "Select a Team",  # Label for dropdown
+            choices={team: team for team in sorted(team_numbers, key=lambda x: int(x))},  # Properly map values
+        )
+    
+    @reactive.calc
+    def filter_by_team():
+        team_number = input.team_select()  # Get selected team from dropdown
+        return df[df["team_key"] == team_number]
+
+    @output
+    @render.data_frame
+    def key_stats_by_team_dt():
+        return render.DataGrid(filter_by_team().round(2), filters=True)
+    
+    @output
+    @render.ui
+    def team_piece_summary_auto():
+        team_data = filter_by_team()
+        return px.bar(
+            team_data,
+            x="match_number",
+            y=[
+                "autoCoralL1",
+                "autoCoralL2",
+                "autoCoralL3",
+                "autoCoralL4",
+                "autoAlgaeNet",
+                "autoAlgaeProc",
+            ],
+        )
+    @output
+    @render.ui
+    def team_piece_summary_teleop():
+        team_data = filter_by_team()
+        return px.bar(
+            team_data,
+            x="match_number",
+            y=[
+                "teleopCoralL1",
+                "teleopCoralL2",
+                "teleopCoralL3",
+                "teleopCoralL4",
+                "teleopAlgaeNet",
+                "teleopAlgaeProc"
+        ],
+    )
+
 
 app = App(app_ui, server)
