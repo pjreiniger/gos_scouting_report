@@ -11,7 +11,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -19,7 +19,7 @@
                 "sd": 3.9
             },
             "unitless": 1429.0,
-            "norm": 1460.0,
+            "norm": 1461.0,
             "conf": [
                 -1.04,
                 1.18
@@ -104,7 +104,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -112,7 +112,7 @@
                 "sd": 7.4
             },
             "unitless": 1503.0,
-            "norm": 1562.0,
+            "norm": 1556.0,
             "conf": [
                 -1.01,
                 1.16
@@ -197,7 +197,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -205,7 +205,7 @@
                 "sd": 5.8
             },
             "unitless": 1485.0,
-            "norm": 1536.0,
+            "norm": 1534.0,
             "conf": [
                 -1.05,
                 1.17
@@ -290,7 +290,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -298,7 +298,7 @@
                 "sd": 6.01
             },
             "unitless": 1597.0,
-            "norm": 1676.0,
+            "norm": 1664.0,
             "conf": [
                 -1.05,
                 1.08
@@ -336,7 +336,7 @@
             "stats": {
                 "start": 39.49,
                 "pre_elim": 38.8,
-                "mean": 40.13,
+                "mean": 40.01,
                 "max": 43.4
             }
         },
@@ -383,7 +383,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -391,7 +391,7 @@
                 "sd": 6.67
             },
             "unitless": 1475.0,
-            "norm": 1525.0,
+            "norm": 1522.0,
             "conf": [
                 -1.08,
                 1.08
@@ -476,7 +476,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -484,7 +484,7 @@
                 "sd": 7.24
             },
             "unitless": 1502.0,
-            "norm": 1561.0,
+            "norm": 1555.0,
             "conf": [
                 -1.13,
                 1.04
@@ -569,7 +569,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -577,7 +577,7 @@
                 "sd": 3.92
             },
             "unitless": 1380.0,
-            "norm": 1388.0,
+            "norm": 1390.0,
             "conf": [
                 -1.27,
                 0.94
@@ -662,7 +662,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -670,7 +670,7 @@
                 "sd": 6.32
             },
             "unitless": 1757.0,
-            "norm": 1852.0,
+            "norm": 1834.0,
             "conf": [
                 -0.88,
                 1.24
@@ -708,8 +708,8 @@
             "stats": {
                 "start": 43.85,
                 "pre_elim": 61.54,
-                "mean": 57.87,
-                "max": 65.54
+                "mean": 57.32,
+                "max": 64.6
             }
         },
         "record": {
@@ -755,7 +755,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -763,7 +763,7 @@
                 "sd": 5.3
             },
             "unitless": 1440.0,
-            "norm": 1477.0,
+            "norm": 1475.0,
             "conf": [
                 -1.08,
                 1.1
@@ -848,7 +848,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -856,7 +856,7 @@
                 "sd": 6.58
             },
             "unitless": 1530.0,
-            "norm": 1597.0,
+            "norm": 1589.0,
             "conf": [
                 -1.11,
                 1.03
@@ -941,7 +941,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -949,7 +949,7 @@
                 "sd": 8.74
             },
             "unitless": 1735.0,
-            "norm": 1828.0,
+            "norm": 1811.0,
             "conf": [
                 -0.83,
                 1.26
@@ -987,8 +987,8 @@
             "stats": {
                 "start": 50.81,
                 "pre_elim": 55.14,
-                "mean": 54.19,
-                "max": 62.35
+                "mean": 53.6,
+                "max": 61.41
             }
         },
         "record": {
@@ -1034,7 +1034,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -1042,7 +1042,7 @@
                 "sd": 6.65
             },
             "unitless": 1493.0,
-            "norm": 1549.0,
+            "norm": 1544.0,
             "conf": [
                 -0.93,
                 1.21
@@ -1127,7 +1127,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -1135,7 +1135,7 @@
                 "sd": 4.53
             },
             "unitless": 1516.0,
-            "norm": 1579.0,
+            "norm": 1572.0,
             "conf": [
                 -0.98,
                 1.19
@@ -1220,7 +1220,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -1228,7 +1228,7 @@
                 "sd": 7.42
             },
             "unitless": 1544.0,
-            "norm": 1616.0,
+            "norm": 1606.0,
             "conf": [
                 -1.04,
                 1.12
@@ -1313,7 +1313,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -1406,7 +1406,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -1414,7 +1414,7 @@
                 "sd": 5.3
             },
             "unitless": 1502.0,
-            "norm": 1561.0,
+            "norm": 1554.0,
             "conf": [
                 -1.2,
                 0.98
@@ -1499,7 +1499,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -1507,7 +1507,7 @@
                 "sd": 8.08
             },
             "unitless": 1596.0,
-            "norm": 1677.0,
+            "norm": 1663.0,
             "conf": [
                 -0.97,
                 1.18
@@ -1592,7 +1592,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -1600,7 +1600,7 @@
                 "sd": 7.0
             },
             "unitless": 1398.0,
-            "norm": 1413.0,
+            "norm": 1416.0,
             "conf": [
                 -1.35,
                 0.76
@@ -1685,7 +1685,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -1693,7 +1693,7 @@
                 "sd": 7.36
             },
             "unitless": 1526.0,
-            "norm": 1593.0,
+            "norm": 1584.0,
             "conf": [
                 -1.01,
                 1.16
@@ -1778,7 +1778,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -1786,7 +1786,7 @@
                 "sd": 7.39
             },
             "unitless": 1462.0,
-            "norm": 1508.0,
+            "norm": 1505.0,
             "conf": [
                 -1.22,
                 0.98
@@ -1871,7 +1871,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -1879,7 +1879,7 @@
                 "sd": 5.37
             },
             "unitless": 1421.0,
-            "norm": 1448.0,
+            "norm": 1449.0,
             "conf": [
                 -1.24,
                 0.98
@@ -1964,7 +1964,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -1972,7 +1972,7 @@
                 "sd": 5.65
             },
             "unitless": 1535.0,
-            "norm": 1604.0,
+            "norm": 1595.0,
             "conf": [
                 -1.23,
                 0.93
@@ -2057,7 +2057,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -2065,7 +2065,7 @@
                 "sd": 6.62
             },
             "unitless": 1477.0,
-            "norm": 1529.0,
+            "norm": 1524.0,
             "conf": [
                 -1.18,
                 0.99
@@ -2150,7 +2150,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -2158,7 +2158,7 @@
                 "sd": 6.15
             },
             "unitless": 1481.0,
-            "norm": 1533.0,
+            "norm": 1529.0,
             "conf": [
                 -0.92,
                 1.2
@@ -2196,8 +2196,8 @@
             "stats": {
                 "start": 21.09,
                 "pre_elim": 19.48,
-                "mean": 21.81,
-                "max": 24.82
+                "mean": 21.6,
+                "max": 24.22
             }
         },
         "record": {
@@ -2243,7 +2243,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -2251,7 +2251,7 @@
                 "sd": 5.62
             },
             "unitless": 1495.0,
-            "norm": 1551.0,
+            "norm": 1546.0,
             "conf": [
                 -0.8,
                 1.23
@@ -2289,8 +2289,8 @@
             "stats": {
                 "start": 21.64,
                 "pre_elim": 23.19,
-                "mean": 22.28,
-                "max": 26.87
+                "mean": 21.97,
+                "max": 26.0
             }
         },
         "record": {
@@ -2336,7 +2336,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -2344,7 +2344,7 @@
                 "sd": 7.87
             },
             "unitless": 1660.0,
-            "norm": 1745.0,
+            "norm": 1730.0,
             "conf": [
                 -0.9,
                 1.22
@@ -2382,8 +2382,8 @@
             "stats": {
                 "start": 31.64,
                 "pre_elim": 44.31,
-                "mean": 44.13,
-                "max": 51.27
+                "mean": 43.65,
+                "max": 50.66
             }
         },
         "record": {
@@ -2429,7 +2429,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -2522,7 +2522,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -2615,7 +2615,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -2623,7 +2623,7 @@
                 "sd": 7.41
             },
             "unitless": 1430.0,
-            "norm": 1464.0,
+            "norm": 1462.0,
             "conf": [
                 -1.17,
                 1.02
@@ -2708,7 +2708,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -2716,7 +2716,7 @@
                 "sd": 3.38
             },
             "unitless": 1338.0,
-            "norm": 1325.0,
+            "norm": 1327.0,
             "conf": [
                 -1.15,
                 1.07
@@ -2801,7 +2801,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -2809,7 +2809,7 @@
                 "sd": 6.39
             },
             "unitless": 1468.0,
-            "norm": 1517.0,
+            "norm": 1513.0,
             "conf": [
                 -0.89,
                 1.26
@@ -2894,7 +2894,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -2902,7 +2902,7 @@
                 "sd": 5.44
             },
             "unitless": 1326.0,
-            "norm": 1306.0,
+            "norm": 1308.0,
             "conf": [
                 -0.9,
                 1.29
@@ -2987,7 +2987,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -2995,7 +2995,7 @@
                 "sd": 4.91
             },
             "unitless": 1496.0,
-            "norm": 1553.0,
+            "norm": 1547.0,
             "conf": [
                 -1.22,
                 0.95
@@ -3080,7 +3080,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -3088,7 +3088,7 @@
                 "sd": 4.87
             },
             "unitless": 1421.0,
-            "norm": 1448.0,
+            "norm": 1449.0,
             "conf": [
                 -1.05,
                 1.12
@@ -3173,7 +3173,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -3181,7 +3181,7 @@
                 "sd": 6.43
             },
             "unitless": 1427.0,
-            "norm": 1456.0,
+            "norm": 1457.0,
             "conf": [
                 -1.02,
                 1.2
@@ -3266,7 +3266,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -3274,7 +3274,7 @@
                 "sd": 4.8
             },
             "unitless": 1467.0,
-            "norm": 1513.0,
+            "norm": 1512.0,
             "conf": [
                 -1.18,
                 1.04
@@ -3359,7 +3359,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -3367,7 +3367,7 @@
                 "sd": 4.88
             },
             "unitless": 1345.0,
-            "norm": 1336.0,
+            "norm": 1338.0,
             "conf": [
                 -1.35,
                 0.76
@@ -3452,7 +3452,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -3460,7 +3460,7 @@
                 "sd": 4.53
             },
             "unitless": 1345.0,
-            "norm": 1334.0,
+            "norm": 1337.0,
             "conf": [
                 -1.28,
                 0.92
@@ -3545,7 +3545,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -3553,7 +3553,7 @@
                 "sd": 7.55
             },
             "unitless": 1331.0,
-            "norm": 1314.0,
+            "norm": 1316.0,
             "conf": [
                 -1.31,
                 0.86
@@ -3638,7 +3638,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -3731,7 +3731,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -3739,7 +3739,7 @@
                 "sd": 5.5
             },
             "unitless": 1461.0,
-            "norm": 1504.0,
+            "norm": 1503.0,
             "conf": [
                 -1.07,
                 1.15
@@ -3824,7 +3824,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -3832,7 +3832,7 @@
                 "sd": 4.81
             },
             "unitless": 1548.0,
-            "norm": 1620.0,
+            "norm": 1611.0,
             "conf": [
                 -0.9,
                 1.23
@@ -3917,7 +3917,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -3925,7 +3925,7 @@
                 "sd": 4.26
             },
             "unitless": 1484.0,
-            "norm": 1538.0,
+            "norm": 1533.0,
             "conf": [
                 -0.91,
                 1.24
@@ -4010,7 +4010,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -4018,7 +4018,7 @@
                 "sd": 6.42
             },
             "unitless": 1356.0,
-            "norm": 1351.0,
+            "norm": 1354.0,
             "conf": [
                 -1.23,
                 0.98
@@ -4103,7 +4103,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -4111,7 +4111,7 @@
                 "sd": 6.44
             },
             "unitless": 1481.0,
-            "norm": 1533.0,
+            "norm": 1529.0,
             "conf": [
                 -0.89,
                 1.26
@@ -4196,7 +4196,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -4204,7 +4204,7 @@
                 "sd": 8.1
             },
             "unitless": 1399.0,
-            "norm": 1415.0,
+            "norm": 1417.0,
             "conf": [
                 -1.1,
                 1.12
@@ -4289,7 +4289,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -4297,7 +4297,7 @@
                 "sd": 5.38
             },
             "unitless": 1427.0,
-            "norm": 1457.0,
+            "norm": 1458.0,
             "conf": [
                 -0.91,
                 1.28
@@ -4382,7 +4382,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
@@ -4390,7 +4390,7 @@
                 "sd": 5.03
             },
             "unitless": 1382.0,
-            "norm": 1390.0,
+            "norm": 1392.0,
             "conf": [
                 -1.17,
                 1.05
@@ -4475,7 +4475,7 @@
         "district": null,
         "type": "regional",
         "week": 2,
-        "status": "Ongoing",
+        "status": "Completed",
         "first_event": true,
         "epa": {
             "total_points": {
