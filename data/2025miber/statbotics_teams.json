@@ -163,7 +163,7 @@
                 "winrate": 0.0,
                 "rps": 1,
                 "rps_per_match": 1.0,
-                "rank": 17,
+                "rank": 18,
                 "num_teams": 35
             },
             "elim": {
@@ -256,7 +256,7 @@
                 "winrate": 1.0,
                 "rps": 3,
                 "rps_per_match": 3.0,
-                "rank": 9,
+                "rank": 8,
                 "num_teams": 35
             },
             "elim": {
@@ -349,7 +349,7 @@
                 "winrate": 1.0,
                 "rps": 3,
                 "rps_per_match": 3.0,
-                "rank": 13,
+                "rank": 15,
                 "num_teams": 35
             },
             "elim": {
@@ -387,62 +387,62 @@
         "first_event": false,
         "epa": {
             "total_points": {
-                "mean": 28.35,
-                "sd": 6.46
+                "mean": 28.44,
+                "sd": 5.78
             },
             "unitless": 1505.0,
-            "norm": 1555.0,
+            "norm": 1554.0,
             "conf": [
-                -0.74,
-                1.18
+                -0.79,
+                1.11
             ],
             "breakdown": {
-                "total_points": 28.35,
-                "auto_points": 2.12,
-                "teleop_points": 23.93,
-                "endgame_points": 2.3,
-                "auto_rp": 0.0672,
-                "coral_rp": -0.1248,
-                "barge_rp": 0.147,
-                "tiebreaker_points": 0.03,
-                "auto_leave_points": 2.11,
-                "auto_coral": -0.06,
-                "auto_coral_points": 0.02,
-                "teleop_coral": 4.87,
-                "teleop_coral_points": 21.3,
-                "coral_l1": 0.69,
-                "coral_l2": -0.09,
-                "coral_l3": 1.14,
-                "coral_l4": 3.17,
-                "total_coral_points": 21.32,
-                "processor_algae": 0.09,
-                "processor_algae_points": 0.26,
-                "net_algae": 0.59,
-                "net_algae_points": 2.37,
-                "total_algae_points": 2.62,
+                "total_points": 28.44,
+                "auto_points": 1.93,
+                "teleop_points": 24.54,
+                "endgame_points": 1.98,
+                "auto_rp": 0.0413,
+                "coral_rp": -0.128,
+                "barge_rp": 0.1203,
+                "tiebreaker_points": 0.09,
+                "auto_leave_points": 2.2,
+                "auto_coral": -0.09,
+                "auto_coral_points": -0.27,
+                "teleop_coral": 4.79,
+                "teleop_coral_points": 21.61,
+                "coral_l1": 0.52,
+                "coral_l2": -0.12,
+                "coral_l3": 0.98,
+                "coral_l4": 3.4,
+                "total_coral_points": 21.34,
+                "processor_algae": 0.32,
+                "processor_algae_points": 0.95,
+                "net_algae": 0.49,
+                "net_algae_points": 1.97,
+                "total_algae_points": 2.92,
                 "total_game_pieces": 5.58,
-                "barge_points": 2.3,
-                "rp_1": 0.0672,
-                "rp_2": -0.1248,
-                "rp_3": 0.147
+                "barge_points": 1.98,
+                "rp_1": 0.0413,
+                "rp_2": -0.128,
+                "rp_3": 0.1203
             },
             "stats": {
                 "start": 28.35,
-                "pre_elim": 28.35,
-                "mean": 28.35,
-                "max": 28.35
+                "pre_elim": 28.44,
+                "mean": 28.43,
+                "max": 28.44
             }
         },
         "record": {
             "qual": {
-                "wins": 0,
+                "wins": 1,
                 "losses": 0,
                 "ties": 0,
-                "count": 0,
-                "winrate": 0.0,
-                "rps": 0,
-                "rps_per_match": 0.0,
-                "rank": null,
+                "count": 1,
+                "winrate": 1.0,
+                "rps": 3,
+                "rps_per_match": 3.0,
+                "rank": 14,
                 "num_teams": 35
             },
             "elim": {
@@ -455,11 +455,11 @@
                 "is_captain": null
             },
             "total": {
-                "wins": 0,
+                "wins": 1,
                 "losses": 0,
                 "ties": 0,
-                "count": 0,
-                "winrate": 0.0
+                "count": 1,
+                "winrate": 1.0
             }
         },
         "district_points": null
@@ -480,62 +480,62 @@
         "first_event": true,
         "epa": {
             "total_points": {
-                "mean": 40.16,
-                "sd": 3.5
+                "mean": 38.06,
+                "sd": 4.12
             },
-            "unitless": 1585.0,
-            "norm": 1641.0,
+            "unitless": 1571.0,
+            "norm": 1624.0,
             "conf": [
-                -1.96,
-                1.96
+                -1.71,
+                1.31
             ],
             "breakdown": {
-                "total_points": 40.16,
-                "auto_points": 8.21,
-                "teleop_points": 27.3,
-                "endgame_points": 4.64,
-                "auto_rp": 0.2157,
-                "coral_rp": -0.069,
-                "barge_rp": 0.1658,
-                "tiebreaker_points": 0.06,
-                "auto_leave_points": 4.2,
-                "auto_coral": 0.69,
-                "auto_coral_points": 4.02,
-                "teleop_coral": 5.88,
-                "teleop_coral_points": 23.22,
-                "coral_l1": 0.99,
-                "coral_l2": 0.89,
-                "coral_l3": 1.51,
-                "coral_l4": 3.01,
-                "total_coral_points": 27.24,
-                "processor_algae": 0.5,
-                "processor_algae_points": 1.49,
-                "net_algae": 0.65,
-                "net_algae_points": 2.59,
-                "total_algae_points": 4.08,
-                "total_game_pieces": 7.54,
-                "barge_points": 4.64,
-                "rp_1": 0.2157,
-                "rp_2": -0.069,
-                "rp_3": 0.1658
+                "total_points": 38.06,
+                "auto_points": 9.5,
+                "teleop_points": 24.54,
+                "endgame_points": 4.02,
+                "auto_rp": 0.2729,
+                "coral_rp": -0.0752,
+                "barge_rp": 0.131,
+                "tiebreaker_points": 0.05,
+                "auto_leave_points": 4.1,
+                "auto_coral": 0.85,
+                "auto_coral_points": 5.4,
+                "teleop_coral": 4.95,
+                "teleop_coral_points": 19.9,
+                "coral_l1": 0.74,
+                "coral_l2": 0.71,
+                "coral_l3": 1.29,
+                "coral_l4": 2.94,
+                "total_coral_points": 25.3,
+                "processor_algae": 0.4,
+                "processor_algae_points": 1.21,
+                "net_algae": 0.86,
+                "net_algae_points": 3.43,
+                "total_algae_points": 4.64,
+                "total_game_pieces": 6.94,
+                "barge_points": 4.02,
+                "rp_1": 0.2729,
+                "rp_2": -0.0752,
+                "rp_3": 0.131
             },
             "stats": {
                 "start": 40.16,
-                "pre_elim": 40.16,
-                "mean": 40.16,
+                "pre_elim": 38.06,
+                "mean": 38.24,
                 "max": 40.16
             }
         },
         "record": {
             "qual": {
                 "wins": 0,
-                "losses": 0,
+                "losses": 1,
                 "ties": 0,
-                "count": 0,
+                "count": 1,
                 "winrate": 0.0,
-                "rps": 0,
-                "rps_per_match": 0.0,
-                "rank": null,
+                "rps": 1,
+                "rps_per_match": 1.0,
+                "rank": 29,
                 "num_teams": 35
             },
             "elim": {
@@ -549,9 +549,9 @@
             },
             "total": {
                 "wins": 0,
-                "losses": 0,
+                "losses": 1,
                 "ties": 0,
-                "count": 0,
+                "count": 1,
                 "winrate": 0.0
             }
         },
@@ -814,7 +814,7 @@
                 "winrate": 0.0,
                 "rps": 1,
                 "rps_per_match": 1.0,
-                "rank": 23,
+                "rank": 25,
                 "num_teams": 35
             },
             "elim": {
@@ -907,7 +907,7 @@
                 "winrate": 1.0,
                 "rps": 3,
                 "rps_per_match": 3.0,
-                "rank": 8,
+                "rank": 7,
                 "num_teams": 35
             },
             "elim": {
@@ -1000,7 +1000,7 @@
                 "winrate": 0.0,
                 "rps": 1,
                 "rps_per_match": 1.0,
-                "rank": 16,
+                "rank": 19,
                 "num_teams": 35
             },
             "elim": {
@@ -1042,7 +1042,7 @@
                 "sd": 6.08
             },
             "unitless": 1537.0,
-            "norm": 1589.0,
+            "norm": 1588.0,
             "conf": [
                 -0.66,
                 1.17
@@ -1093,7 +1093,7 @@
                 "winrate": 1.0,
                 "rps": 4,
                 "rps_per_match": 4.0,
-                "rank": 6,
+                "rank": 5,
                 "num_teams": 35
             },
             "elim": {
@@ -1186,7 +1186,7 @@
                 "winrate": 1.0,
                 "rps": 5,
                 "rps_per_match": 5.0,
-                "rank": 1,
+                "rank": 3,
                 "num_teams": 35
             },
             "elim": {
@@ -1279,7 +1279,7 @@
                 "winrate": 0.0,
                 "rps": 1,
                 "rps_per_match": 1.0,
-                "rank": 18,
+                "rank": 20,
                 "num_teams": 35
             },
             "elim": {
@@ -1317,62 +1317,62 @@
         "first_event": false,
         "epa": {
             "total_points": {
-                "mean": 13.69,
-                "sd": 5.2
+                "mean": 12.43,
+                "sd": 5.29
             },
-            "unitless": 1405.0,
-            "norm": 1433.0,
+            "unitless": 1397.0,
+            "norm": 1422.0,
             "conf": [
-                -1.18,
-                0.83
+                -1.16,
+                0.77
             ],
             "breakdown": {
-                "total_points": 13.69,
-                "auto_points": 3.42,
-                "teleop_points": 9.2,
-                "endgame_points": 1.08,
-                "auto_rp": 0.0898,
-                "coral_rp": -0.0639,
-                "barge_rp": 0.0002,
-                "tiebreaker_points": -0.04,
-                "auto_leave_points": 2.23,
-                "auto_coral": 0.21,
-                "auto_coral_points": 1.18,
-                "teleop_coral": 2.57,
-                "teleop_coral_points": 11.33,
-                "coral_l1": 0.48,
-                "coral_l2": -0.05,
-                "coral_l3": 0.2,
-                "coral_l4": 2.09,
-                "total_coral_points": 12.51,
-                "processor_algae": -0.07,
-                "processor_algae_points": -0.21,
-                "net_algae": -0.48,
-                "net_algae_points": -1.92,
-                "total_algae_points": -2.13,
-                "total_game_pieces": 2.17,
-                "barge_points": 1.08,
-                "rp_1": 0.0898,
-                "rp_2": -0.0639,
-                "rp_3": 0.0002
+                "total_points": 12.43,
+                "auto_points": 4.19,
+                "teleop_points": 7.54,
+                "endgame_points": 0.7,
+                "auto_rp": 0.1241,
+                "coral_rp": -0.0676,
+                "barge_rp": -0.0207,
+                "tiebreaker_points": -0.05,
+                "auto_leave_points": 2.17,
+                "auto_coral": 0.32,
+                "auto_coral_points": 2.01,
+                "teleop_coral": 2.02,
+                "teleop_coral_points": 9.34,
+                "coral_l1": 0.32,
+                "coral_l2": -0.15,
+                "coral_l3": 0.07,
+                "coral_l4": 2.05,
+                "total_coral_points": 11.35,
+                "processor_algae": -0.13,
+                "processor_algae_points": -0.38,
+                "net_algae": -0.35,
+                "net_algae_points": -1.41,
+                "total_algae_points": -1.79,
+                "total_game_pieces": 1.81,
+                "barge_points": 0.7,
+                "rp_1": 0.1241,
+                "rp_2": -0.0676,
+                "rp_3": -0.0207
             },
             "stats": {
                 "start": 13.69,
-                "pre_elim": 13.69,
-                "mean": 13.69,
+                "pre_elim": 12.43,
+                "mean": 12.54,
                 "max": 13.69
             }
         },
         "record": {
             "qual": {
                 "wins": 0,
-                "losses": 0,
+                "losses": 1,
                 "ties": 0,
-                "count": 0,
+                "count": 1,
                 "winrate": 0.0,
-                "rps": 0,
-                "rps_per_match": 0.0,
-                "rank": null,
+                "rps": 1,
+                "rps_per_match": 1.0,
+                "rank": 27,
                 "num_teams": 35
             },
             "elim": {
@@ -1386,9 +1386,9 @@
             },
             "total": {
                 "wins": 0,
-                "losses": 0,
+                "losses": 1,
                 "ties": 0,
-                "count": 0,
+                "count": 1,
                 "winrate": 0.0
             }
         },
@@ -1465,7 +1465,7 @@
                 "winrate": 0.0,
                 "rps": 0,
                 "rps_per_match": 0.0,
-                "rank": 28,
+                "rank": 35,
                 "num_teams": 35
             },
             "elim": {
@@ -1558,7 +1558,7 @@
                 "winrate": 0.0,
                 "rps": 0,
                 "rps_per_match": 0.0,
-                "rank": 29,
+                "rank": 34,
                 "num_teams": 35
             },
             "elim": {
@@ -1651,7 +1651,7 @@
                 "winrate": 0.0,
                 "rps": 1,
                 "rps_per_match": 1.0,
-                "rank": 19,
+                "rank": 21,
                 "num_teams": 35
             },
             "elim": {
@@ -1744,7 +1744,7 @@
                 "winrate": 0.0,
                 "rps": 1,
                 "rps_per_match": 1.0,
-                "rank": 22,
+                "rank": 24,
                 "num_teams": 35
             },
             "elim": {
@@ -1930,7 +1930,7 @@
                 "winrate": 0.0,
                 "rps": 0,
                 "rps_per_match": 0.0,
-                "rank": 30,
+                "rank": 33,
                 "num_teams": 35
             },
             "elim": {
@@ -1972,7 +1972,7 @@
                 "sd": 4.67
             },
             "unitless": 1456.0,
-            "norm": 1498.0,
+            "norm": 1499.0,
             "conf": [
                 -0.97,
                 0.94
@@ -2023,7 +2023,7 @@
                 "winrate": 1.0,
                 "rps": 3,
                 "rps_per_match": 3.0,
-                "rank": 7,
+                "rank": 9,
                 "num_teams": 35
             },
             "elim": {
@@ -2061,62 +2061,62 @@
         "first_event": true,
         "epa": {
             "total_points": {
-                "mean": 33.46,
-                "sd": 3.5
+                "mean": 31.36,
+                "sd": 4.12
             },
-            "unitless": 1539.0,
-            "norm": 1593.0,
+            "unitless": 1525.0,
+            "norm": 1576.0,
             "conf": [
-                -1.96,
-                1.96
+                -1.71,
+                1.31
             ],
             "breakdown": {
-                "total_points": 33.46,
-                "auto_points": 6.84,
-                "teleop_points": 22.74,
-                "endgame_points": 3.86,
-                "auto_rp": 0.1797,
-                "coral_rp": -0.0734,
-                "barge_rp": 0.1377,
-                "tiebreaker_points": 0.05,
-                "auto_leave_points": 3.5,
-                "auto_coral": 0.57,
-                "auto_coral_points": 3.35,
-                "teleop_coral": 4.9,
-                "teleop_coral_points": 19.35,
-                "coral_l1": 0.83,
-                "coral_l2": 0.74,
-                "coral_l3": 1.26,
-                "coral_l4": 2.51,
-                "total_coral_points": 22.69,
-                "processor_algae": 0.41,
-                "processor_algae_points": 1.24,
-                "net_algae": 0.54,
-                "net_algae_points": 2.16,
-                "total_algae_points": 3.4,
-                "total_game_pieces": 6.28,
-                "barge_points": 3.86,
-                "rp_1": 0.1797,
-                "rp_2": -0.0734,
-                "rp_3": 0.1377
+                "total_points": 31.36,
+                "auto_points": 8.12,
+                "teleop_points": 19.99,
+                "endgame_points": 3.24,
+                "auto_rp": 0.2369,
+                "coral_rp": -0.0796,
+                "barge_rp": 0.1029,
+                "tiebreaker_points": 0.04,
+                "auto_leave_points": 3.4,
+                "auto_coral": 0.74,
+                "auto_coral_points": 4.73,
+                "teleop_coral": 3.97,
+                "teleop_coral_points": 16.02,
+                "coral_l1": 0.57,
+                "coral_l2": 0.56,
+                "coral_l3": 1.04,
+                "coral_l4": 2.44,
+                "total_coral_points": 20.75,
+                "processor_algae": 0.32,
+                "processor_algae_points": 0.96,
+                "net_algae": 0.75,
+                "net_algae_points": 3.0,
+                "total_algae_points": 3.96,
+                "total_game_pieces": 5.68,
+                "barge_points": 3.24,
+                "rp_1": 0.2369,
+                "rp_2": -0.0796,
+                "rp_3": 0.1029
             },
             "stats": {
                 "start": 33.46,
-                "pre_elim": 33.46,
-                "mean": 33.46,
+                "pre_elim": 31.36,
+                "mean": 31.54,
                 "max": 33.46
             }
         },
         "record": {
             "qual": {
                 "wins": 0,
-                "losses": 0,
+                "losses": 1,
                 "ties": 0,
-                "count": 0,
+                "count": 1,
                 "winrate": 0.0,
-                "rps": 0,
-                "rps_per_match": 0.0,
-                "rank": null,
+                "rps": 1,
+                "rps_per_match": 1.0,
+                "rank": 28,
                 "num_teams": 35
             },
             "elim": {
@@ -2130,9 +2130,9 @@
             },
             "total": {
                 "wins": 0,
-                "losses": 0,
+                "losses": 1,
                 "ties": 0,
-                "count": 0,
+                "count": 1,
                 "winrate": 0.0
             }
         },
@@ -2154,62 +2154,62 @@
         "first_event": true,
         "epa": {
             "total_points": {
-                "mean": 29.33,
-                "sd": 3.5
+                "mean": 29.47,
+                "sd": 2.87
             },
-            "unitless": 1511.0,
+            "unitless": 1512.0,
             "norm": 1562.0,
             "conf": [
-                -1.96,
-                1.96
+                -1.52,
+                1.52
             ],
             "breakdown": {
-                "total_points": 29.33,
-                "auto_points": 6.0,
-                "teleop_points": 19.94,
-                "endgame_points": 3.39,
-                "auto_rp": 0.1575,
-                "coral_rp": -0.0761,
-                "barge_rp": 0.1204,
-                "tiebreaker_points": 0.04,
-                "auto_leave_points": 3.07,
-                "auto_coral": 0.5,
-                "auto_coral_points": 2.93,
-                "teleop_coral": 4.3,
-                "teleop_coral_points": 16.96,
-                "coral_l1": 0.72,
-                "coral_l2": 0.65,
-                "coral_l3": 1.1,
-                "coral_l4": 2.2,
-                "total_coral_points": 19.9,
-                "processor_algae": 0.36,
-                "processor_algae_points": 1.09,
-                "net_algae": 0.47,
-                "net_algae_points": 1.89,
-                "total_algae_points": 2.98,
-                "total_game_pieces": 5.51,
-                "barge_points": 3.39,
-                "rp_1": 0.1575,
-                "rp_2": -0.0761,
-                "rp_3": 0.1204
+                "total_points": 29.47,
+                "auto_points": 5.67,
+                "teleop_points": 20.96,
+                "endgame_points": 2.84,
+                "auto_rp": 0.1144,
+                "coral_rp": -0.0813,
+                "barge_rp": 0.0759,
+                "tiebreaker_points": 0.14,
+                "auto_leave_points": 3.22,
+                "auto_coral": 0.44,
+                "auto_coral_points": 2.45,
+                "teleop_coral": 4.16,
+                "teleop_coral_points": 17.48,
+                "coral_l1": 0.45,
+                "coral_l2": 0.59,
+                "coral_l3": 0.84,
+                "coral_l4": 2.58,
+                "total_coral_points": 19.93,
+                "processor_algae": 0.75,
+                "processor_algae_points": 2.25,
+                "net_algae": 0.31,
+                "net_algae_points": 1.23,
+                "total_algae_points": 3.48,
+                "total_game_pieces": 5.52,
+                "barge_points": 2.84,
+                "rp_1": 0.1144,
+                "rp_2": -0.0813,
+                "rp_3": 0.0759
             },
             "stats": {
                 "start": 29.33,
-                "pre_elim": 29.33,
-                "mean": 29.33,
-                "max": 29.33
+                "pre_elim": 29.47,
+                "mean": 29.46,
+                "max": 29.47
             }
         },
         "record": {
             "qual": {
-                "wins": 0,
+                "wins": 1,
                 "losses": 0,
                 "ties": 0,
-                "count": 0,
-                "winrate": 0.0,
-                "rps": 0,
-                "rps_per_match": 0.0,
-                "rank": null,
+                "count": 1,
+                "winrate": 1.0,
+                "rps": 3,
+                "rps_per_match": 3.0,
+                "rank": 13,
                 "num_teams": 35
             },
             "elim": {
@@ -2222,11 +2222,11 @@
                 "is_captain": null
             },
             "total": {
-                "wins": 0,
+                "wins": 1,
                 "losses": 0,
                 "ties": 0,
-                "count": 0,
-                "winrate": 0.0
+                "count": 1,
+                "winrate": 1.0
             }
         },
         "district_points": null
@@ -2247,62 +2247,62 @@
         "first_event": false,
         "epa": {
             "total_points": {
-                "mean": 13.55,
-                "sd": 5.96
+                "mean": 13.63,
+                "sd": 5.33
             },
-            "unitless": 1404.0,
-            "norm": 1432.0,
+            "unitless": 1405.0,
+            "norm": 1433.0,
             "conf": [
-                -0.95,
-                1.02
+                -0.93,
+                0.99
             ],
             "breakdown": {
-                "total_points": 13.55,
-                "auto_points": 3.86,
-                "teleop_points": 6.44,
-                "endgame_points": 3.25,
-                "auto_rp": 0.1614,
-                "coral_rp": -0.0524,
-                "barge_rp": 0.1316,
-                "tiebreaker_points": 0.03,
-                "auto_leave_points": 2.46,
-                "auto_coral": 0.13,
-                "auto_coral_points": 1.4,
-                "teleop_coral": 2.07,
-                "teleop_coral_points": 7.05,
-                "coral_l1": 1.07,
-                "coral_l2": -0.06,
-                "coral_l3": 0.14,
-                "coral_l4": 1.15,
-                "total_coral_points": 8.45,
-                "processor_algae": 0.07,
-                "processor_algae_points": 0.22,
-                "net_algae": -0.21,
-                "net_algae_points": -0.83,
-                "total_algae_points": -0.61,
-                "total_game_pieces": 2.17,
-                "barge_points": 3.25,
-                "rp_1": 0.1614,
-                "rp_2": -0.0524,
-                "rp_3": 0.1316
+                "total_points": 13.63,
+                "auto_points": 3.66,
+                "teleop_points": 7.05,
+                "endgame_points": 2.92,
+                "auto_rp": 0.1356,
+                "coral_rp": -0.0555,
+                "barge_rp": 0.1049,
+                "tiebreaker_points": 0.09,
+                "auto_leave_points": 2.56,
+                "auto_coral": 0.1,
+                "auto_coral_points": 1.11,
+                "teleop_coral": 1.99,
+                "teleop_coral_points": 7.37,
+                "coral_l1": 0.91,
+                "coral_l2": -0.09,
+                "coral_l3": -0.02,
+                "coral_l4": 1.39,
+                "total_coral_points": 8.47,
+                "processor_algae": 0.31,
+                "processor_algae_points": 0.92,
+                "net_algae": -0.31,
+                "net_algae_points": -1.23,
+                "total_algae_points": -0.31,
+                "total_game_pieces": 2.18,
+                "barge_points": 2.92,
+                "rp_1": 0.1356,
+                "rp_2": -0.0555,
+                "rp_3": 0.1049
             },
             "stats": {
                 "start": 11.42,
-                "pre_elim": 13.55,
-                "mean": 13.37,
-                "max": 13.55
+                "pre_elim": 13.63,
+                "mean": 13.44,
+                "max": 13.63
             }
         },
         "record": {
             "qual": {
-                "wins": 1,
+                "wins": 2,
                 "losses": 0,
                 "ties": 0,
-                "count": 1,
+                "count": 2,
                 "winrate": 1.0,
-                "rps": 4,
-                "rps_per_match": 4.0,
-                "rank": 4,
+                "rps": 7,
+                "rps_per_match": 3.5,
+                "rank": 6,
                 "num_teams": 35
             },
             "elim": {
@@ -2315,10 +2315,10 @@
                 "is_captain": null
             },
             "total": {
-                "wins": 1,
+                "wins": 2,
                 "losses": 0,
                 "ties": 0,
-                "count": 1,
+                "count": 2,
                 "winrate": 1.0
             }
         },
@@ -2395,7 +2395,7 @@
                 "winrate": 0.0,
                 "rps": 1,
                 "rps_per_match": 1.0,
-                "rank": 20,
+                "rank": 23,
                 "num_teams": 35
             },
             "elim": {
@@ -2488,7 +2488,7 @@
                 "winrate": 0.0,
                 "rps": 0,
                 "rps_per_match": 0.0,
-                "rank": 27,
+                "rank": 30,
                 "num_teams": 35
             },
             "elim": {
@@ -2581,7 +2581,7 @@
                 "winrate": 0.0,
                 "rps": 1,
                 "rps_per_match": 1.0,
-                "rank": 24,
+                "rank": 26,
                 "num_teams": 35
             },
             "elim": {
@@ -2674,7 +2674,7 @@
                 "winrate": 1.0,
                 "rps": 4,
                 "rps_per_match": 4.0,
-                "rank": 5,
+                "rank": 4,
                 "num_teams": 35
             },
             "elim": {
@@ -2767,7 +2767,7 @@
                 "winrate": 0.0,
                 "rps": 1,
                 "rps_per_match": 1.0,
-                "rank": 21,
+                "rank": 22,
                 "num_teams": 35
             },
             "elim": {
@@ -2860,7 +2860,7 @@
                 "winrate": 1.0,
                 "rps": 3,
                 "rps_per_match": 3.0,
-                "rank": 14,
+                "rank": 17,
                 "num_teams": 35
             },
             "elim": {
@@ -2953,7 +2953,7 @@
                 "winrate": 1.0,
                 "rps": 5,
                 "rps_per_match": 5.0,
-                "rank": 3,
+                "rank": 1,
                 "num_teams": 35
             },
             "elim": {
@@ -3046,7 +3046,7 @@
                 "winrate": 0.0,
                 "rps": 0,
                 "rps_per_match": 0.0,
-                "rank": 26,
+                "rank": 31,
                 "num_teams": 35
             },
             "elim": {
@@ -3139,7 +3139,7 @@
                 "winrate": 0.0,
                 "rps": 0,
                 "rps_per_match": 0.0,
-                "rank": 25,
+                "rank": 32,
                 "num_teams": 35
             },
             "elim": {
@@ -3232,7 +3232,7 @@
                 "winrate": 1.0,
                 "rps": 3,
                 "rps_per_match": 3.0,
-                "rank": 15,
+                "rank": 16,
                 "num_teams": 35
             },
             "elim": {
