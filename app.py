@@ -55,6 +55,7 @@ df["algaeAuto"] = df["autoAlgaeNet"] + df["autoAlgaeProc"]
 position = df["bargeStatus"]
 df["endgamePoints"] = np.where(position == "Parked", 2, np.where(position == "Shallow Cage", 6, np.where(position == "Deep  Cage", 12, 0)))
 
+df["endgamePlusAuto"] = df["totalAutoPoints"] + df["totalEndgamePoints"]
 
 df["totalPointsScored"] = df["totalTeleopPoints"] + df["totalAutoPoints"] + df["endgamePoints"]
 
@@ -134,7 +135,10 @@ ui.page_sidebar(
         "Alliance Selection",
         ui.card(
             ui.output_data_frame("key_stats_dt")
-        )
+        ),
+        ui.card(
+            ui.output_ui("statbotics_scatter")
+        )        
     ),
 
     ui.nav_panel(
@@ -159,7 +163,6 @@ ui.page_sidebar(
     title="GoS REEFSCAPE Data Science Report",
 )
 
-# Define the server logic
 def server(input, output, session):
     # upcoming alliance lineup
     def color_picker(team_num):
@@ -743,6 +746,26 @@ def server(input, output, session):
                 "teleopAlgaeProc"
         ],
     )
+    # print(df.keys())
+    @output
+    @render.ui
+    def statbotics_scatter():
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+        teams = averages_by_team_all["team_key"]
+        
+        x = averages_by_team_all["endgamePlusAuto"]
+        y = averages_by_team_all["totalTeleopPoints"]
 
+        # Create the plot
+        fig = px.scatter(x=x, y=y, text=teams, labels={'x': "auto + endgame", 'y': "teleop"},
+                        title="Auto & Endgame vs Teleop")
+
+        # Add custom color for each point based on the team_key
+        colors = [color_picker(team) for team in teams]  # Apply color_picker correctly
+        fig.update_traces(marker=dict(color=colors,
+                                    symbol='circle', size=10),
+                        textposition="middle left")
+        
+        return ui.HTML(fig.to_html(full_html=False))
 
 app = App(app_ui, server)
