@@ -1,10 +1,11 @@
 
 import requests
 
-def __make_request(url: str, org_key: str) -> bytes:
+def __make_request(url: str, org_key: str, event_key: str) -> bytes:
 
     cookies = {
         "org_key": org_key,
+        "event_key": event_key,
     }
     headers = {
         "User-Agent":
@@ -16,14 +17,14 @@ def __make_request(url: str, org_key: str) -> bytes:
     return response.content
 
 
-def request_scout_radioz_match_scouting(org_key):
+def request_scout_radioz_match_scouting(org_key, event_key):
     url = "https://scoutradioz.com/reports/exportdata?type=matchscouting"
 
-    return __make_request(url, org_key)
+    return __make_request(url, org_key, event_key)
 
 
-def download_scout_radioz_match_scouting(org_key, output_file):
-    content = request_scout_radioz_match_scouting(org_key)
+def download_scout_radioz_match_scouting(org_key, event_key, output_file):
+    content = request_scout_radioz_match_scouting(org_key, event_key)
 
     with open(output_file, 'wb') as f:
         f.write(content)
@@ -56,14 +57,14 @@ def download_scout_radioz_match_scouting(org_key, output_file):
 
 
 
-def request_scout_radioz_pit_scouting(org_key):
+def request_scout_radioz_pit_scouting(org_key, event_key):
     url = "https://scoutradioz.com/reports/exportdata?type=pitscouting"
 
-    return __make_request(url, org_key)
+    return __make_request(url, org_key, event_key)
 
 
-def download_scout_radioz_pit_scouting(org_key, output_file):
-    content = request_scout_radioz_pit_scouting(org_key)
+def download_scout_radioz_pit_scouting(org_key, event_key, output_file):
+    content = request_scout_radioz_pit_scouting(org_key, event_key)
 
     with open(output_file, 'wb') as f:
         f.write(content)

@@ -24,8 +24,8 @@ def download_external_data(event):
     download_tba_event_matches(event, data_directory / "tba_matches.json")
 
     org_key = "steelcity"
-    download_scout_radioz_match_scouting(org_key, data_directory / "match_scouting.csv")
-    download_scout_radioz_pit_scouting(org_key, data_directory / "pit_scouting.csv")
+    download_scout_radioz_match_scouting(org_key, event, data_directory / "match_scouting.csv")
+    download_scout_radioz_pit_scouting(org_key, event, data_directory / "pit_scouting.csv")
 
 
 if __name__ == "__main__":
