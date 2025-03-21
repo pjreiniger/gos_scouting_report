@@ -11,8 +11,8 @@ from utils import statbotics_utils, tba_utils
 
 # read in data
 USE_LOCAL_VERSION = True
-EVENT_KEY = "2025miber"
-OUR_TEAM_NUMBER = 3539
+EVENT_KEY = "2025paca"
+OUR_TEAM_NUMBER = 3504
 
 if USE_LOCAL_VERSION:
     script_directory = pathlib.Path(__file__).resolve().parent
