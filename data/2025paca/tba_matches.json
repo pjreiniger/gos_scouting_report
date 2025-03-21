@@ -16228,7 +16228,7 @@
         "event_key": "2025paca",
         "key": "2025paca_qm59",
         "match_number": 59,
-        "post_result_time": null,
+        "post_result_time": 1742594360,
         "predicted_time": 1742594095,
         "score_breakdown": {
             "blue": {
@@ -16492,7 +16492,12 @@
         },
         "set_number": 1,
         "time": 1742593200,
-        "videos": [],
+        "videos": [
+            {
+                "key": "6uKbSOyIcks",
+                "type": "youtube"
+            }
+        ],
         "winning_alliance": "blue"
     },
     {
