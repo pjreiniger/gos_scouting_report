@@ -23999,5 +23999,149 @@
             }
         ],
         "winning_alliance": "red"
+    },
+    {
+        "actual_time": null,
+        "alliances": {
+            "blue": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc2656",
+                    "frc4991",
+                    "frc7515"
+                ]
+            },
+            "red": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc3539",
+                    "frc694",
+                    "frc3492"
+                ]
+            }
+        },
+        "comp_level": "sf",
+        "event_key": "2025paca",
+        "key": "2025paca_sf1m1",
+        "match_number": 1,
+        "post_result_time": null,
+        "predicted_time": null,
+        "score_breakdown": null,
+        "set_number": 1,
+        "time": 1742664600,
+        "videos": [],
+        "winning_alliance": ""
+    },
+    {
+        "actual_time": null,
+        "alliances": {
+            "blue": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc1708",
+                    "frc117",
+                    "frc63"
+                ]
+            },
+            "red": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc4467",
+                    "frc2399",
+                    "frc2172"
+                ]
+            }
+        },
+        "comp_level": "sf",
+        "event_key": "2025paca",
+        "key": "2025paca_sf2m1",
+        "match_number": 1,
+        "post_result_time": null,
+        "predicted_time": null,
+        "score_breakdown": null,
+        "set_number": 2,
+        "time": 1742665140,
+        "videos": [],
+        "winning_alliance": ""
+    },
+    {
+        "actual_time": null,
+        "alliances": {
+            "blue": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc2603",
+                    "frc2638",
+                    "frc4269"
+                ]
+            },
+            "red": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc4145",
+                    "frc4122",
+                    "frc10515"
+                ]
+            }
+        },
+        "comp_level": "sf",
+        "event_key": "2025paca",
+        "key": "2025paca_sf3m1",
+        "match_number": 1,
+        "post_result_time": null,
+        "predicted_time": null,
+        "score_breakdown": null,
+        "set_number": 3,
+        "time": 1742665680,
+        "videos": [],
+        "winning_alliance": ""
+    },
+    {
+        "actual_time": null,
+        "alliances": {
+            "blue": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc4121",
+                    "frc4027",
+                    "frc2641"
+                ]
+            },
+            "red": {
+                "dq_team_keys": [],
+                "score": -1,
+                "surrogate_team_keys": [],
+                "team_keys": [
+                    "frc379",
+                    "frc5740",
+                    "frc3504"
+                ]
+            }
+        },
+        "comp_level": "sf",
+        "event_key": "2025paca",
+        "key": "2025paca_sf4m1",
+        "match_number": 1,
+        "post_result_time": null,
+        "predicted_time": null,
+        "score_breakdown": null,
+        "set_number": 4,
+        "time": 1742666220,
+        "videos": [],
+        "winning_alliance": ""
     }
 ]
