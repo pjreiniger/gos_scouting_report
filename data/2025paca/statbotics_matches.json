@@ -9137,7 +9137,7 @@
         "match_name": "Semis 1 Match 1",
         "time": 1742664600,
         "predicted_time": 1742664622,
-        "status": "Upcoming",
+        "status": "Completed",
         "video": null,
         "alliances": {
             "red": {
@@ -9151,9 +9151,9 @@
             },
             "blue": {
                 "team_keys": [
+                    7515,
                     2656,
-                    4991,
-                    7515
+                    4991
                 ],
                 "surrogate_team_keys": [],
                 "dq_team_keys": []
@@ -9178,9 +9178,9 @@
             "blue_rp_3": 0.2603
         },
         "result": {
-            "winner": null,
-            "red_score": -1,
-            "blue_score": -1,
+            "winner": "red",
+            "red_score": 181,
+            "blue_score": 92,
             "red_no_foul": null,
             "blue_no_foul": null,
             "red_auto_points": null,
@@ -9250,7 +9250,7 @@
         "match_number": 1,
         "match_name": "Semis 2 Match 1",
         "time": 1742665140,
-        "predicted_time": 1742665162,
+        "predicted_time": 1742665517,
         "status": "Upcoming",
         "video": null,
         "alliances": {
@@ -9364,7 +9364,7 @@
         "match_number": 1,
         "match_name": "Semis 3 Match 1",
         "time": 1742665680,
-        "predicted_time": 1742665702,
+        "predicted_time": 1742666057,
         "status": "Upcoming",
         "video": null,
         "alliances": {
@@ -9478,7 +9478,7 @@
         "match_number": 1,
         "match_name": "Semis 4 Match 1",
         "time": 1742666220,
-        "predicted_time": 1742666242,
+        "predicted_time": 1742666597,
         "status": "Upcoming",
         "video": null,
         "alliances": {
