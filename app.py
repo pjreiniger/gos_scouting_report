@@ -11,8 +11,8 @@ from utils import statbotics_utils, tba_utils
 
 # read in data
 USE_LOCAL_VERSION = True
-EVENT_KEY = "2025miber"
-OUR_TEAM_NUMBER = 3539
+EVENT_KEY = "2025paca"
+OUR_TEAM_NUMBER = 3504
 
 if USE_LOCAL_VERSION:
     script_directory = pathlib.Path(__file__).resolve().parent
@@ -80,6 +80,8 @@ ui.nav_panel(
     "Match Preview",
 ui.page_sidebar(
     ui.sidebar(
+        ui.input_radio_buttons("match_or_team", "Select Match Number or 6 Teams",
+        choices=["Match Number", "Select 6 Teams"], selected="Match Number"),
         "Filter Matches",
         ui.input_switch("our_matches_switch", "Filter Our Matches", False),
         ui.output_ui("match_list_combobox"),
@@ -240,7 +242,7 @@ def server(input, output, session):
         y = averages_by_team["totalTeleopCoral"]
         teams = averages_by_team["team_key"]
 
-        fig = px.scatter(x=x, y=y, text=teams, labels={'x': "Avg Algae Scored", 'y': "Avg Coral Scored in Net"},
+        fig = px.scatter(x=x, y=y, text=teams, labels={'x': "Avg Algae Scored", 'y': "Avg Coral Scored"},
                         title="Algae vs Coral TELEOP")
 
         colors = [color_picker(team) for team in teams]
