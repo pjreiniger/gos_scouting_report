@@ -1,11 +1,5 @@
 [
     {
-<<<<<<< HEAD
-        "actual_time": 1742561847,
-        "alliances": {
-            "blue": {
-                "dq_team_keys": [],
-=======
         "actual_time": 1742674484,
         "alliances": {
             "blue": {
@@ -610,7 +604,6 @@
         "alliances": {
             "blue": {
                 "dq_team_keys": [],
->>>>>>> a951110e170beeb2b991af5f5bd469bee6d536d0
                 "score": 27,
                 "surrogate_team_keys": [],
                 "team_keys": [
@@ -2098,7 +2091,12 @@
         },
         "set_number": 1,
         "time": 1742567160,
-        "videos": [],
+        "videos": [
+            {
+                "key": "EWKCgqAZHHU",
+                "type": "youtube"
+            }
+        ],
         "winning_alliance": "blue"
     },
     {
@@ -23435,11 +23433,6 @@
         "event_key": "2025paca",
         "key": "2025paca_qm79",
         "match_number": 79,
-<<<<<<< HEAD
-        "post_result_time": null,
-        "predicted_time": 1742656999,
-        "score_breakdown": null,
-=======
         "post_result_time": 1742657465,
         "predicted_time": 1742656999,
         "score_breakdown": {
@@ -23702,7 +23695,6 @@
                 "wallAlgaeCount": 0
             }
         },
->>>>>>> a951110e170beeb2b991af5f5bd469bee6d536d0
         "set_number": 1,
         "time": 1742656920,
         "videos": [
@@ -24041,11 +24033,6 @@
         "event_key": "2025paca",
         "key": "2025paca_qm80",
         "match_number": 80,
-<<<<<<< HEAD
-        "post_result_time": null,
-        "predicted_time": 1742657479,
-        "score_breakdown": null,
-=======
         "post_result_time": 1742657880,
         "predicted_time": 1742657815,
         "score_breakdown": {
@@ -24308,7 +24295,6 @@
                 "wallAlgaeCount": 0
             }
         },
->>>>>>> a951110e170beeb2b991af5f5bd469bee6d536d0
         "set_number": 1,
         "time": 1742657400,
         "videos": [
@@ -24618,8 +24604,6 @@
             }
         ],
         "winning_alliance": "red"
-<<<<<<< HEAD
-=======
     },
     {
         "actual_time": 1742670217,
@@ -28520,6 +28504,5 @@
             }
         ],
         "winning_alliance": "red"
->>>>>>> a951110e170beeb2b991af5f5bd469bee6d536d0
     }
 ]

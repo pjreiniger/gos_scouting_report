@@ -73,7 +73,7 @@ def create_mock_data_for_missing_teams(teams_with_no_data):
     return pd.DataFrame(data)
 
 df_unique_teams = df.drop_duplicates(subset=['team_key'], keep='first')
-print(df_unique_teams.keys())
+# print(df_unique_teams.keys())
 # Define the UI
 app_ui = ui.page_navbar(
 ui.nav_panel(
@@ -82,8 +82,7 @@ ui.page_sidebar(
     ui.sidebar(
         ui.input_radio_buttons("match_or_team", "Select Match Number or 6 Teams",
         choices=["Match Number", "Select 6 Teams"], selected="Match Number"),
-        "Filter Matches",
-        ui.input_switch("our_matches_switch", "Filter Our Matches", False),
+        ui.output_ui("our_matches_switch_ui"),
         ui.output_ui("match_list_combobox"),
     ),
     ui.page_navbar(
@@ -95,6 +94,18 @@ ui.page_sidebar(
         ui.card(
             ui.output_ui("total_points_boxplot")
         ),
+        ui.card(
+            ui.output_ui("avg_coral_red_box")
+        ),
+        ui.card(
+            ui.output_ui("avg_coral_blue_box")
+        ),
+        ui.card(
+            ui.output_ui("avg_endgame_red_box")
+        ),
+        ui.card(
+            ui.output_ui("avg_endgame_blue_box")
+        )        
     ),
     ui.nav_panel(
         "Auto Data",
@@ -176,10 +187,15 @@ def server(input, output, session):
 
     @reactive.calc
     def get_match_data():
-        match_num = int(input.match_select())
-        match_data = matches_df[matches_df["match_number"] == match_num].reset_index()
-        red_teams = [match_data["red1"][0][3:], match_data["red2"][0][3:], match_data["red3"][0][3:]]
-        blue_teams = [match_data["blue1"][0][3:], match_data["blue2"][0][3:], match_data["blue3"][0][3:]]
+        if input.match_or_team() == "Match Number":
+            match_num = int(input.match_select())
+            match_data = matches_df[matches_df["match_number"] == match_num].reset_index()
+            red_teams = [match_data["red1"][0][3:], match_data["red2"][0][3:], match_data["red3"][0][3:]]
+            blue_teams = [match_data["blue1"][0][3:], match_data["blue2"][0][3:], match_data["blue3"][0][3:]]
+        else:
+            red_teams = [input.red1(), input.red2(), input.red3()]
+            blue_teams = [input.blue1(), input.blue2(), input.blue3()]
+
 
         all_teams = red_teams + blue_teams
 
@@ -673,28 +689,47 @@ def server(input, output, session):
 
         return render.DataGrid(averages_by_team_all.round(2), filters=True)
     
+    @output
+    @render.ui
+    def our_matches_switch_ui():
+        if input.match_or_team() == "Match Number":
+            return ui.input_switch("our_matches_switch", "Filter Our Matches", False)
+        else:
+            return None
+
     @render.ui
     def match_list_combobox():
-        if input.our_matches_switch():
-        # Fix: Use .apply() to check if OUR_TEAM_NUMBER is in the list of team keys
-            matches_df_copy = matches_df[
-                matches_df["alliances.blue.team_keys"].apply(lambda teams: any(str(OUR_TEAM_NUMBER) in team for team in teams)) |
-                matches_df["alliances.red.team_keys"].apply(lambda teams: any(str(OUR_TEAM_NUMBER) in team for team in teams))]
-            match_numbers = matches_df_copy["match_number"]
-        else:
-            match_numbers = matches_df["match_number"]
+        if input.match_or_team() == "Match Number":
+            if input.our_matches_switch():
+            # Fix: Use .apply() to check if OUR_TEAM_NUMBER is in the list of team keys
+                matches_df_copy = matches_df[
+                    matches_df["alliances.blue.team_keys"].apply(lambda teams: any(str(OUR_TEAM_NUMBER) in team for team in teams)) |
+                    matches_df["alliances.red.team_keys"].apply(lambda teams: any(str(OUR_TEAM_NUMBER) in team for team in teams))]
+                match_numbers = matches_df_copy["match_number"]
+            else:
+                match_numbers = matches_df["match_number"]
 
-        return (
-            ui.input_select(
-                "match_select",
-                "Match",
-                {
-                    str(match_number): str(match_number)
-                    for match_number in sorted(match_numbers)
-                },
-            ),
-        )
-    
+            return (
+                ui.input_select(
+                    "match_select",
+                    "Match",
+                    {
+                        str(match_number): str(match_number)
+                        for match_number in sorted(match_numbers)
+                    },
+                ),
+            )
+        else: 
+            team_numbers = df_unique_teams["team_key"].astype(str).tolist()
+            return ui.div(
+                ui.input_select("red1", "Red Alliance Teams", choices=team_numbers),
+                ui.input_select("red2", "", choices=team_numbers),
+                ui.input_select("red3", "", choices=team_numbers),
+                ui.input_select("blue1", "Blue Alliance Teams", choices=team_numbers),
+                ui.input_select("blue2", "", choices=team_numbers),
+                ui.input_select("blue3", "", choices=team_numbers),
+            )
+        
     @output
     @render.ui
     def team_list_combobox():
@@ -769,5 +804,57 @@ def server(input, output, session):
                         textposition="middle left")
         
         return ui.HTML(fig.to_html(full_html=False))
+    
+    @output
+    @render.ui
+    def avg_coral_red_box():
+        
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+        red_df = averages_by_team.loc[averages_by_team["team_key"].isin(red_teams)]
+        avg_coral_pieces = red_df["totalTeleopCoral"].sum()+red_df["totalAutoCoral"].sum()
+        
+        return ui.value_box(
+            title="Avg Coral Pieces RED",
+            value=str(round(float(avg_coral_pieces), 1))
+        )
+
+    @output
+    @render.ui
+    def avg_coral_blue_box():
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+        blue_df = averages_by_team.loc[averages_by_team["team_key"].isin(blue_teams)]
+
+        avg_coral_pieces = blue_df["totalTeleopCoral"].sum()+blue_df["totalAutoCoral"].sum()
+        
+        return ui.value_box(
+            title="Avg Coral Pieces BLUE",
+            value=str(round(float(avg_coral_pieces), 1))
+        )
+
+    @output
+    @render.ui
+    def avg_endgame_red_box():
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+        red_df = averages_by_team.loc[averages_by_team["team_key"].isin(red_teams)]
+
+        endgame_avg = red_df["endgamePoints"].sum()
+        
+        return ui.value_box(
+            title="Avg Endgame Points RED",
+            value=str(round(float(endgame_avg), 1))
+        )
+    
+    @output
+    @render.ui
+    def avg_endgame_blue_box():
+        new_df, color_map, red_teams, blue_teams, all_teams, averages_by_team, averages_by_team_all = get_match_data()
+        blue_df = averages_by_team.loc[averages_by_team["team_key"].isin(blue_teams)]
+
+        endgame_avg = blue_df["endgamePoints"].sum()
+        
+        return ui.value_box(
+            title="Avg Endgame Points BLUE",
+            value=str(round(float(endgame_avg), 1))
+        )
 
 app = App(app_ui, server)
