@@ -105,7 +105,16 @@ ui.page_sidebar(
         ),
         ui.card(
             ui.output_ui("avg_endgame_blue_box")
-        )        
+        ),
+        ui.card(
+            ui.output_data_frame("statbotics_dataframe")
+        ),
+        ui.card(
+            ui.output_ui("red_statbotics_prediction")
+        ),
+        ui.card(
+            ui.output_ui("blue_statbotics_prediction")
+        )           
     ),
     ui.nav_panel(
         "Auto Data",
@@ -856,5 +865,46 @@ def server(input, output, session):
             title="Avg Endgame Points BLUE",
             value=str(round(float(endgame_avg), 1))
         )
+    # @reactive.calc
+    # def filter_by_match():
+    #     match_number = int(input.match_select())
+    #     scouted_data = df[
+    #         df["match_number"] == match_number
+    #     ]
+    #     statbotics_data = statbotics_df[
+    #         statbotics_df.match_number == match_number
+    #     ]
 
+    #     return scouted_data, statbotics_data
+    
+    @render.text
+    def red_statbotics_prediction():
+        match_num = int(input.match_select())
+        statbotics_data_filtered = statbotics_df.loc[
+            (statbotics_df["match_number"] == match_num )
+            & (statbotics_df["comp_level"] == "qm")
+        ]
+        return ui.value_box(
+            title="Prediction RED",
+            value=str(statbotics_data_filtered["pred.red_score"].sum())
+        )
+
+    @render.text
+    def blue_statbotics_prediction():
+        match_num = int(input.match_select())
+        statbotics_data_filtered = statbotics_df.loc[
+            (statbotics_df["match_number"] == match_num) 
+            & (statbotics_df["comp_level"] == "qm")
+        ]
+        return ui.value_box(
+            title="Prediction BLUE",
+            value=str(statbotics_data_filtered["pred.blue_score"].sum())
+        )
+    
+    @output
+    @render.data_frame
+    def statbotics_dataframe():
+        return render.DataGrid(statbotics_df, filters=True)
+    
+    
 app = App(app_ui, server)
